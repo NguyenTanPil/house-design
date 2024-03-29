@@ -1,4 +1,4 @@
-import { Container, ImageList, ImageListItem, ImageListItemBar, ListSubheader } from '@mui/material';
+import { Container, ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
 
 const Signature = () => {
 	return (
@@ -7,13 +7,16 @@ const Signature = () => {
 				mt: 8,
 			}}
 		>
-			<ImageList sx={{}}>
-				<ImageListItem
-					key='Subheader'
-					cols={3}
-				>
-					<ListSubheader component='div'>Signature Design</ListSubheader>
-				</ImageListItem>
+			<Typography
+				variant='h6'
+				sx={{
+					textTransform: 'uppercase',
+					fontWeight: '500',
+				}}
+			>
+				Signature Design
+			</Typography>
+			<ImageList cols={3}>
 				<ImageListItem>
 					<img
 						src='https://decoxdesign.com/upload/sanpham/large/centenial-house.jpg'
