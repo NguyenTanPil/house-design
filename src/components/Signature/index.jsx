@@ -16,7 +16,13 @@ const Signature = () => {
 			>
 				Signature Design
 			</Typography>
-			<ImageList cols={3}>
+			<ImageList
+				sx={{
+					gridTemplateColumns: '4fr 2fr !important',
+				}}
+				cols={2}
+				gap={8}
+			>
 				<ImageListItem>
 					<img
 						src='https://decoxdesign.com/upload/sanpham/large/centenial-house.jpg'
@@ -29,26 +35,41 @@ const Signature = () => {
 					/>
 				</ImageListItem>
 				<ImageListItem>
-					<img
-						src='https://decoxdesign.com/upload/sanpham/la-sirena-villa.jpg'
-						alt=''
-						loading='lazy'
-					/>
-					<ImageListItemBar
-						title='CENTENIAL HOUSE'
-						subtitle='For new home construction, ElectroServ is one of the largest service providers'
-					/>
-				</ImageListItem>
-				<ImageListItem>
-					<img
-						src='https://decoxdesign.com/upload/sanpham/the-opera-180m2.jpg'
-						alt=''
-						loading='lazy'
-					/>
-					<ImageListItemBar
-						title='CENTENIAL HOUSE'
-						subtitle='For new home construction, ElectroServ is one of the largest service providers'
-					/>
+					<ImageList cols={1}>
+						<ImageListItem>
+							<img
+								src='https://decoxdesign.com/upload/sanpham/la-sirena-villa.jpg'
+								alt=''
+								loading='lazy'
+							/>
+							<ImageListItemBar
+								title='CENTENIAL HOUSE'
+								subtitle='For new home construction, ElectroServ is one of the largest service providers'
+							/>
+						</ImageListItem>
+						<ImageListItem>
+							<img
+								src='https://decoxdesign.com/upload/sanpham/d9-villa.jpg'
+								alt=''
+								loading='lazy'
+							/>
+							<ImageListItemBar
+								title='CENTENIAL HOUSE'
+								subtitle='For new home construction, ElectroServ is one of the largest service providers'
+							/>
+						</ImageListItem>
+						<ImageListItem>
+							<img
+								src='https://decoxdesign.com/upload/sanpham/annam-villa.jpg'
+								alt=''
+								loading='lazy'
+							/>
+							<ImageListItemBar
+								title='CENTENIAL HOUSE'
+								subtitle='For new home construction, ElectroServ is one of the largest service providers'
+							/>
+						</ImageListItem>
+					</ImageList>
 				</ImageListItem>
 			</ImageList>
 		</Container>
