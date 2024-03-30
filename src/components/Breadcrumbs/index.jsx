@@ -1,8 +1,8 @@
+import { Box, Container, Typography } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import HomeIcon from '@mui/icons-material/Home';
 import { useParams } from 'react-router-dom';
-import { Container, Typography } from '@mui/material';
+import { COLORS } from '../../constants';
 
 const getTextTranslateBreadcrumb = (str) => {
 	switch (str) {
@@ -26,38 +26,77 @@ export default function Breadcrumb() {
 
 	return (
 		<Container>
-			<div
-				style={{
-					backgroundColor: '#f7f7f7',
-					padding: '8px 0px 8px 4px',
-					border: '1px solid #ececec',
-					boxSizing: 'content-box',
+			<Box
+				sx={{
+					background:
+						'url(https://landmark.imgix.net/Hero-Images/FORTE-3D-Render-Low-res.jpg?w=1200&dpr=1.75&q=60&fm=webp) no-repeat',
+					backgroundSize: 'cover',
+					backgroundPosition: 'top left',
+					backgroundRepeat: 'no-repeat',
+					paddingY: '4rem',
+					position: 'relative',
+					backgroundColor: '#0e0d12',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					justifyContent: 'center',
 				}}
 			>
-				<div role='presentation'>
-					<Breadcrumbs aria-label='breadcrumb'>
-						<Link
-							underline='hover'
-							sx={{
-								display: 'flex',
-								alignItems: 'center',
-								color: '#000',
-							}}
-							href='/'
-						>
-							<HomeIcon
-								sx={{ mr: 0.5 }}
-								fontSize='inherit'
-							/>
-							Home
-						</Link>
-						<Typography
-							sx={{ display: 'flex', alignItems: 'center' }}
-							color='text.primary'
-						>
-							{getTextTranslateBreadcrumb(category)}
-						</Typography>
-						{/* <Link
+				<Box
+					sx={{
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						right: 0,
+						bottom: 0,
+						backgroundColor: 'rgba(0, 0, 0, 0.36)',
+						zIndex: 1,
+					}}
+				/>
+				<Typography
+					variant='h6'
+					sx={{
+						fontSize: '2rem',
+						fontWeight: '600',
+						color: COLORS.backgroundColor,
+						textTransform: 'uppercase',
+						zIndex: 2,
+					}}
+				>
+					Mẫu Nhà Đẹp
+				</Typography>
+				<Breadcrumbs
+					aria-label='breadcrumb'
+					sx={{ color: COLORS.backgroundColor, zIndex: 2 }}
+				>
+					<Link
+						underline='hover'
+						sx={{
+							display: 'flex',
+							alignItems: 'center',
+							fontSize: '1rem',
+							color: COLORS.backgroundColor,
+							'&:hover': {
+								transition: '0.3s ease-in-out',
+								color: COLORS.selectedColor,
+							},
+						}}
+						href='/'
+					>
+						Home
+					</Link>
+					<Typography
+						sx={{
+							fontSize: '1rem',
+							// '&:hover': {
+							// 	transition: '0.3s ease-in-out',
+							// 	color: COLORS.selectedColor,
+							// },
+						}}
+					>
+						{getTextTranslateBreadcrumb(category)}
+					</Typography>
+					{/* <Link
           underline="hover"
           sx={{ display: 'flex', alignItems: 'center' }}
           color="inherit"
@@ -65,9 +104,8 @@ export default function Breadcrumb() {
         >
           {category}
         </Link> */}
-					</Breadcrumbs>
-				</div>
-			</div>
+				</Breadcrumbs>
+			</Box>
 		</Container>
 	);
 }

@@ -59,7 +59,7 @@ const CategoriesFilter = () => {
 						color: COLORS.selectedColor,
 					}}
 				>
-					Our Services
+					Categories
 				</Typography>
 				<Divider
 					variant='middle'
