@@ -7,4 +7,7 @@ export const COLORS = {
 	textColor: '#909193',
 	titleColor: '#25262e',
 	backgroundColor: '#ffffff',
+	backgroundColorFooter: '#0e0d12',
+	colorFooter: '#808083',
+	backgroundColorFooterIcon: '#363740',
 };
