@@ -1,5 +1,7 @@
-import { Container, ImageListItem, Typography } from '@mui/material';
+import { Box, Container, ImageListItem, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { COLORS } from '../../constants';
+import { collection } from '../../dummy';
 
 const Collection = () => {
 	return (
@@ -36,96 +38,52 @@ const Collection = () => {
 					},
 				}}
 			>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/large/centenial-house.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/sofitel-villa.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/binh-tan-townhouse-hinh-anh-thuc-te.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/d9-villa.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/the-indofuture-sky-villa.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/annam-villa.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/the-deluxe-townhouse.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/deluxe-townhouse.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
-				<SplideSlide>
-					<ImageListItem>
-						<img
-							src='https://decoxdesign.com/upload/sanpham/the-silver-townhouse.jpg'
-							alt=''
-							loading='lazy'
-						/>
-					</ImageListItem>
-				</SplideSlide>
+				{collection.map((item) => (
+					<SplideSlide key={item.id}>
+						<ImageListItem
+							sx={{
+								position: 'relative',
+								height: '100% !important',
+							}}
+						>
+							<img
+								src={item.imgUrl}
+								alt=''
+								loading='lazy'
+							/>
+							<Box
+								sx={{
+									cursor: 'pointer',
+									position: 'absolute',
+									top: 0,
+									left: 0,
+									right: 0,
+									bottom: 0,
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									zIndex: 2,
+									opacity: 0,
+									width: '100%',
+									'&:hover': {
+										opacity: 1,
+										transition: '0.3s ease-in-out',
+										background: 'linear-gradient(0deg,rgba(0,0,0,.85) 0,rgba(0,0,0,.3) 88%,transparent)',
+									},
+								}}
+							>
+								<Typography
+									variant='h5'
+									sx={{
+										color: COLORS.backgroundColor,
+									}}
+								>
+									{item.text}
+								</Typography>
+							</Box>
+						</ImageListItem>
+					</SplideSlide>
+				))}
 			</Splide>
 		</Container>
 	);

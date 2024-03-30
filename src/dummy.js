@@ -141,7 +141,7 @@ export const tiktokStories = [
 	{
 		id: 'a4',
 		title: 'Làm Kiến trúc sư có khó không?',
-		imgUrl: 'https://decoxdesign.com/upload/tiktok/modern-luxury-se-khong-bao-gio-loi-thoi.jpg',
+		imgUrl: 'https://decoxdesign.com/upload/tiktok/nha-ong-va-nha-pho-o-viet-nam.jpg',
 	},
 	{
 		id: 'a5',
@@ -173,5 +173,33 @@ export const tiktokStories = [
 		id: 'a10',
 		title: 'The Yacht House - Khám phá du thuyền trên mặt đất',
 		imgUrl: 'https://decoxdesign.com/upload/tiktok/the-yacht-house-kham-pha-du-thuyen-tren-mat-dat.jpg',
+	},
+];
+
+export const collection = [
+	{
+		id: 'c1',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/large/centenial-house.jpg',
+	},
+	{
+		id: 'c2',
+		text: 'The Yacht House',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/sofitel-villa.jpg',
+	},
+	{
+		id: 'c3',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/binh-tan-townhouse-hinh-anh-thuc-te.jpg',
+	},
+	{
+		id: 'c4',
+		text: 'Deluxe Townhouse',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/d9-villa.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
 	},
 ];

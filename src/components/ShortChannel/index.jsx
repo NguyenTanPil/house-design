@@ -4,7 +4,7 @@ import { COLORS } from '../../constants';
 
 const ShortChannel = () => {
 	return (
-		<Container sx={{ mt: 8 }}>
+		<Container sx={{ mt: 8, mb: 8 }}>
 			<Typography
 				variant='h6'
 				sx={{
