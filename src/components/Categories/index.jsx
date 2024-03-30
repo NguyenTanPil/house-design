@@ -9,7 +9,7 @@ const Categories = () => {
 	return (
 		<Container
 			sx={{
-				mt: '2rem',
+				mt: 8,
 			}}
 		>
 			<Box
@@ -49,18 +49,28 @@ const Categories = () => {
 			</Box>
 			<Grid
 				container
-				spacing={4}
 				sx={{
 					justifyContent: 'center',
 				}}
 			>
 				<Grid
 					item
-					xs={2.4}
+					xs={12}
+					sm={2.4}
+					sx={{
+						paddingTop: {
+							xs: '1rem',
+							md: '2rem',
+						},
+						paddingLeft: {
+							xs: '1rem',
+							md: '2rem',
+						},
+					}}
 				>
 					<Box
 						sx={{
-							backgroundColor: '#fff',
+							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
 							alignItems: 'center',
@@ -74,8 +84,14 @@ const Categories = () => {
 						<Box
 							sx={{
 								cursor: 'pointer',
-								width: '4rem',
-								height: '4rem',
+								width: {
+									sx: '3rem',
+									md: '4rem',
+								},
+								height: {
+									sx: '3rem',
+									md: '4rem',
+								},
 								mt: '1rem',
 								display: 'flex',
 								alignItems: 'center',
@@ -106,7 +122,18 @@ const Categories = () => {
 				</Grid>
 				<Grid
 					item
-					xs={2.4}
+					xs={12}
+					sm={2.4}
+					sx={{
+						paddingTop: {
+							xs: '1rem',
+							md: '2rem',
+						},
+						paddingLeft: {
+							xs: '1rem',
+							md: '2rem',
+						},
+					}}
 				>
 					<Box
 						sx={{
@@ -124,8 +151,14 @@ const Categories = () => {
 						<Box
 							sx={{
 								cursor: 'pointer',
-								width: '4rem',
-								height: '4rem',
+								width: {
+									sx: '3rem',
+									md: '4rem',
+								},
+								height: {
+									sx: '3rem',
+									md: '4rem',
+								},
 								mt: '1rem',
 								display: 'flex',
 								alignItems: 'center',
@@ -156,7 +189,18 @@ const Categories = () => {
 				</Grid>
 				<Grid
 					item
-					xs={2.4}
+					xs={12}
+					sm={2.4}
+					sx={{
+						paddingTop: {
+							xs: '1rem',
+							md: '2rem',
+						},
+						paddingLeft: {
+							xs: '1rem',
+							md: '2rem',
+						},
+					}}
 				>
 					<Box
 						sx={{
@@ -174,8 +218,14 @@ const Categories = () => {
 						<Box
 							sx={{
 								cursor: 'pointer',
-								width: '4rem',
-								height: '4rem',
+								width: {
+									sx: '3rem',
+									md: '4rem',
+								},
+								height: {
+									sx: '3rem',
+									md: '4rem',
+								},
 								mt: '1rem',
 								display: 'flex',
 								alignItems: 'center',
@@ -206,7 +256,18 @@ const Categories = () => {
 				</Grid>
 				<Grid
 					item
-					xs={2.4}
+					xs={12}
+					sm={2.4}
+					sx={{
+						paddingTop: {
+							xs: '1rem',
+							md: '2rem',
+						},
+						paddingLeft: {
+							xs: '1rem',
+							md: '2rem',
+						},
+					}}
 				>
 					<Box
 						sx={{
@@ -224,8 +285,14 @@ const Categories = () => {
 						<Box
 							sx={{
 								cursor: 'pointer',
-								width: '4rem',
-								height: '4rem',
+								width: {
+									sx: '3rem',
+									md: '4rem',
+								},
+								height: {
+									sx: '3rem',
+									md: '4rem',
+								},
 								mt: '1rem',
 								display: 'flex',
 								alignItems: 'center',
@@ -256,7 +323,18 @@ const Categories = () => {
 				</Grid>
 				<Grid
 					item
-					xs={2.4}
+					xs={12}
+					sm={2.4}
+					sx={{
+						paddingTop: {
+							xs: '1rem',
+							md: '2rem',
+						},
+						paddingLeft: {
+							xs: '1rem',
+							md: '2rem',
+						},
+					}}
 				>
 					<Box
 						sx={{
@@ -274,8 +352,14 @@ const Categories = () => {
 						<Box
 							sx={{
 								cursor: 'pointer',
-								width: '4rem',
-								height: '4rem',
+								width: {
+									sx: '3rem',
+									md: '4rem',
+								},
+								height: {
+									sx: '3rem',
+									md: '4rem',
+								},
 								mt: '1rem',
 								display: 'flex',
 								alignItems: 'center',

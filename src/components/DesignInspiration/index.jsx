@@ -16,7 +16,13 @@ const DesignInspiration = () => {
 				Design Inspiration
 			</Typography>
 			<ImageList
-				cols={4}
+				sx={{
+					gridTemplateColumns: {
+						xs: 'repeat(2, 1fr) !important',
+						sm: 'repeat(3, 1fr) !important',
+						md: 'repeat(4, 1fr) !important',
+					},
+				}}
 				gap={8}
 			>
 				{designByAi.map((item) => (

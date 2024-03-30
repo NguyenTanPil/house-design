@@ -10,7 +10,7 @@ const Banner = () => {
 				sx={{
 					minHeight: '720px',
 					background: 'url(https://decoxdesign.com/images/green-bg.jpg) no-repeat',
-					backgroundSize: 'contain',
+					backgroundSize: 'cover',
 					position: 'relative',
 				}}
 			>
@@ -37,6 +37,11 @@ const Banner = () => {
 							arrows: false,
 							autoScroll: {
 								speed: 2,
+							},
+							breakpoints: {
+								600: {
+									perPage: 2,
+								},
 							},
 						}}
 					>
