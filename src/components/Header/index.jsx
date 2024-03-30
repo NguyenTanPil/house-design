@@ -72,7 +72,6 @@ const Header = () => {
 					paddingY: 1,
 					bgcolor: COLORS.backgroundColor,
 					backgroundImage: 'none',
-					boxShadow: 'none',
 				}}
 			>
 				<Container>

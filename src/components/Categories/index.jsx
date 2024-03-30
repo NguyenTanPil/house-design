@@ -7,7 +7,6 @@ import { COLORS } from '../../constants';
 import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
-
 	const navigate = useNavigate();
 	return (
 		<Container
@@ -83,7 +82,9 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
-						onClick={() => { navigate('/mau-nha-dep');}}
+						onClick={() => {
+							navigate('/mau-nha-dep');
+						}}
 					>
 						<Box
 							sx={{
@@ -141,7 +142,7 @@ const Categories = () => {
 				>
 					<Box
 						sx={{
-							backgroundColor: '#fff',
+							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
 							alignItems: 'center',
@@ -151,7 +152,9 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
-						onClick={() => { navigate('/phong-khach');}}
+						onClick={() => {
+							navigate('/phong-khach');
+						}}
 					>
 						<Box
 							sx={{
@@ -209,7 +212,7 @@ const Categories = () => {
 				>
 					<Box
 						sx={{
-							backgroundColor: '#fff',
+							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
 							alignItems: 'center',
@@ -219,7 +222,9 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
-						onClick={() => { navigate('/phong-bep');}}
+						onClick={() => {
+							navigate('/phong-bep');
+						}}
 					>
 						<Box
 							sx={{
@@ -277,7 +282,7 @@ const Categories = () => {
 				>
 					<Box
 						sx={{
-							backgroundColor: '#fff',
+							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
 							alignItems: 'center',
@@ -287,7 +292,9 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
-						onClick={() => { navigate('/phong-ngu');}}
+						onClick={() => {
+							navigate('/phong-ngu');
+						}}
 					>
 						<Box
 							sx={{
@@ -345,7 +352,7 @@ const Categories = () => {
 				>
 					<Box
 						sx={{
-							backgroundColor: '#fff',
+							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
 							alignItems: 'center',
@@ -355,7 +362,9 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
-						onClick={() => { navigate('/ban-cong');}}
+						onClick={() => {
+							navigate('/ban-cong');
+						}}
 					>
 						<Box
 							sx={{

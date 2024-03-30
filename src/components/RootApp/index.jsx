@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 import IntroduceBanner from '../IntroduceBanner';
 import { RootAppContainer } from './RootAppStyles';
+import ScrollToTop from '../ScrollToTop';
 
 const RootApp = () => {
 	return (
@@ -11,6 +12,7 @@ const RootApp = () => {
 			<Outlet />
 			<IntroduceBanner />
 			<Footer />
+			<ScrollToTop />
 		</RootAppContainer>
 	);
 };
