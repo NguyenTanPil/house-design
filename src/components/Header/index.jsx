@@ -1,6 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import { Button, Container, Drawer, MenuItem } from '@mui/material';
+import { Button, Container, Drawer, MenuItem, useScrollTrigger } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
@@ -62,6 +62,10 @@ const Header = () => {
 		setOpen(newOpen);
 	};
 
+	const trigger = useScrollTrigger({
+		threshold: 0,
+	});
+
 	const scrollToSection = () => {};
 
 	return (
@@ -72,6 +76,9 @@ const Header = () => {
 					paddingY: 1,
 					bgcolor: COLORS.backgroundColor,
 					backgroundImage: 'none',
+					boxShadow: trigger
+						? '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)'
+						: 'none',
 				}}
 			>
 				<Container>

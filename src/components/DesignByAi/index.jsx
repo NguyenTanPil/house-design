@@ -42,8 +42,8 @@ const DesignByAi = () => {
 								color: COLORS.titleColor,
 								textOverflow: 'ellipsis',
 								display: '-webkit-box',
-								'-webkit-line-clamp': '2',
-								'-webkit-box-orient': 'vertical',
+								webkitLineClamp: '2',
+								webkitBoxOrient: 'vertical',
 								overflow: 'hidden',
 							}}
 						>

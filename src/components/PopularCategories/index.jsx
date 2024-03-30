@@ -85,8 +85,8 @@ const PopularCategories = ({ items, title, subTitle, perPage, imageHeight }) => 
 													color: COLORS.titleColor,
 													textOverflow: 'ellipsis',
 													display: '-webkit-box',
-													'-webkit-line-clamp': '2',
-													'-webkit-box-orient': 'vertical',
+													webkitLineClamp: '2',
+													webkitBoxOrient: 'vertical',
 													overflow: 'hidden',
 												}}
 											>
@@ -99,8 +99,8 @@ const PopularCategories = ({ items, title, subTitle, perPage, imageHeight }) => 
 													sx={{
 														textOverflow: 'ellipsis',
 														display: '-webkit-box',
-														'-webkit-line-clamp': '2',
-														'-webkit-box-orient': 'vertical',
+														webkitLineClamp: '2',
+														webkitBoxOrient: 'vertical',
 														overflow: 'hidden',
 													}}
 												>
@@ -124,7 +124,7 @@ PopularCategories.propTypes = {
 	items: PropTypes.array,
 	perPage: PropTypes.number,
 	subTitle: PropTypes.string,
-	imageHeight: PropTypes.string,
+	imageHeight: PropTypes.number,
 };
 
 PopularCategories.defaultProps = {
