@@ -1,15 +1,14 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import CrimsonButton from "./CustomButton";
 
 export default function IntroduceBanner() {
     return (
-        <div style={{ width: "65%" }}>
+        <div style={{ width: "65%", padding: '0 0 32px 0' }}>
             <Grid
                 container
                 rowSpacing={1}
@@ -18,7 +17,7 @@ export default function IntroduceBanner() {
                 <Grid xs={4}>
                     <Card>
                         <CardMedia
-                            sx={{ height: 240 }}
+                            sx={{ height: 245 }}
                             image="https://decoxdesign.com/upload/banner/landscape.jpg"
                             title="green iguana"
                         />
@@ -27,7 +26,7 @@ export default function IntroduceBanner() {
                 <Grid xs={4}>
                     <Card
                         sx={{
-                            maxHeight: 240,
+                            maxHeight: 245,
                             boxShadow: "0px 0px 3px 1px rgba(0,0,0,.16)",
                         }}
                     >
@@ -54,18 +53,55 @@ export default function IntroduceBanner() {
                                     và sự bền vững cho cuộc sống của bạn. Tìm
                                     hiểu về Decox tại đây
                                 </Typography>
-                                <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <Button variant="outlined">XEM NGAY</Button>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    <CrimsonButton content='XEM NGAY' onClick={() => {console.log('abc')}} type={'midnightBlue'}></CrimsonButton>
                                 </div>
                             </Stack>
                         </CardContent>
-                        {/* <CardActions disableSpacing>
-                            <Button variant="outlined">Outlined</Button>
-                        </CardActions> */}
                     </Card>
                 </Grid>
                 <Grid xs={4}>
-                    <Box>333</Box>
+                    <Card
+                        sx={{
+                            height: 245,
+                            boxShadow: "0px 0px 3px 1px rgba(0,0,0,.16)",
+                        }}
+                    >
+                        {/* <CardHeader title="Về Decox" /> */}
+                        <CardContent>
+                            <Stack spacing={2}>
+                                <Typography
+                                    variant="h5"
+                                    sx={{
+                                        color: "#264c5d",
+                                        fontWeight: "bold",
+                                    }}
+                                >
+                                    Quy trình làm việc
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{ lineHeight: "22px" }}
+                                >
+                                    Một sản phẩm đẹp cần nhiều thời gian để thực hiện, và còn cần thêm hàng chục những bàn tay nhân sự tham gia vào quá trình xây dựng và phát triển, hãy cùng tìm hiểu nhé
+                                </Typography>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        marginTop: '38px'
+                                    }}
+                                >
+                                    <CrimsonButton content='XEM THÊM' onClick={() => {console.log('abc')}} type={'crimson'}></CrimsonButton>
+                                </div>
+                            </Stack>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
         </div>

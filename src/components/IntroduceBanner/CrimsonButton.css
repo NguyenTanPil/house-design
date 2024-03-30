@@ -1,0 +1,46 @@
+.crimson-button,
+.midnightBlue-button {
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    background-color: white;
+    color: crimson;
+    border: 2px solid crimson;
+}
+
+.crimson-button:hover {
+    background-color: crimson;
+    color: white;
+    border: none;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.midnightBlue-button:hover {
+    background-color: midnightblue !important;
+    color: white !important;
+    border: 2px solid midnightblue !important;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.crimson-button:active {
+    background-color: crimson;
+    border: 2px solid crimson !important;
+}
+
+.midnightBlue-button {
+    background-color: white;
+    color: midnightblue;
+    border: 2px solid midnightblue;
+}
+
+
