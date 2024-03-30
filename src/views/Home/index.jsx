@@ -11,6 +11,8 @@ import IntroduceBanner from '../../components/IntroduceBanner';
 import Box from '@mui/material/Box';
 import PopularCategories from '../../components/PopularCategories';
 import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
+import DesignByAi from '../../components/DesignByAi';
+import DesignInspiration from '../../components/DesignInspiration';
 
 const Home = () => {
 	const { category } = useParams();
@@ -53,6 +55,8 @@ const Home = () => {
 						title='SHORT VIDEO'
 						subTitle='Decox on tiktok'
 					/>
+					<DesignByAi />
+					<DesignInspiration />
 				</Box>
 			) : (
 				<Box

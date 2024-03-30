@@ -7,7 +7,6 @@ const RootApp = () => {
 	return (
 		<RootAppContainer>
 			<Header />
-
 			<Outlet />
 			<Footer />
 		</RootAppContainer>

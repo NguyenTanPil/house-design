@@ -203,3 +203,54 @@ export const collection = [
 		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
 	},
 ];
+
+export const designByAi = [
+	{
+		id: 'd1',
+		title: 'Amuse Room',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/dk-villa.jpg',
+	},
+	{
+		id: 'd2',
+		title: 'Elmer House',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-silver-townhouse.jpg',
+	},
+	{
+		id: 'd3',
+		title: 'Deluxe Townhouse',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/bamboo-villa.jpg',
+	},
+	{
+		id: 'd4',
+		title: 'Valley Restaurant',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/villa-del-sol.jpg',
+	},
+	{
+		id: 'd5',
+		title: 'Black Villa',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/dk-villa.jpg',
+	},
+	{
+		id: 'd6',
+		title: 'Vietnam Villas',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-indofuture-sky-villa.jpg',
+	},
+	{
+		id: 'd9',
+		title: 'Terra Lobby',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/deluxe-townhouse.jpg',
+	},
+	{
+		id: 'd10',
+		title: 'Harmony Garden',
+		desc: 'New Architecture',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-silver-townhouse.jpg',
+	},
+];
