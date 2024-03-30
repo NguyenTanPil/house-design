@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer';
 import Header from '../Header';
+import IntroduceBanner from '../IntroduceBanner';
 import { RootAppContainer } from './RootAppStyles';
 
 const RootApp = () => {
@@ -8,6 +9,7 @@ const RootApp = () => {
 		<RootAppContainer>
 			<Header />
 			<Outlet />
+			<IntroduceBanner />
 			<Footer />
 		</RootAppContainer>
 	);

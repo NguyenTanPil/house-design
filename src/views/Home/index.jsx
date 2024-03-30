@@ -5,15 +5,15 @@ import Collection from '../../components/Collection';
 import ShortChannel from '../../components/ShortChannel';
 import Signature from '../../components/Signature';
 import Slider from '../../components/Slider';
-import MasonryImageList from '../../components/GalleryImage';
 import Breadcrumb from '../../components/Breadcrumbs';
-import IntroduceBanner from '../../components/IntroduceBanner';
+// import IntroduceBanner from '../../components/IntroduceBanner';
 import Box from '@mui/material/Box';
 import PopularCategories from '../../components/PopularCategories';
 import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
 import DesignByAi from '../../components/DesignByAi';
 import DesignInspiration from '../../components/DesignInspiration';
 import Banner from '../../components/Banner';
+import Category from '../Category';
 
 const Home = () => {
 	const { category } = useParams();
@@ -70,16 +70,7 @@ const Home = () => {
 					}}
 				>
 					<Breadcrumb />
-					<MasonryImageList />
-					<Box
-						sx={{
-							borderBottom: '1px dashed #ccc',
-							height: '2px',
-							width: '65%',
-							margin: '40px 0px',
-						}}
-					></Box>
-					<IntroduceBanner />
+					<Category />
 				</Box>
 			)}
 		</>

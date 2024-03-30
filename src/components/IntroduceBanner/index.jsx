@@ -5,10 +5,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import CrimsonButton from "./CustomButton";
+import { Container } from '@mui/material';
 
 export default function IntroduceBanner() {
     return (
-        <div style={{ width: "65%", padding: '0 0 32px 0' }}>
+        <Container
+            sx={{
+                mt: 5,
+            }}
+        >
             <Grid
                 container
                 rowSpacing={1}
@@ -59,7 +64,13 @@ export default function IntroduceBanner() {
                                         justifyContent: "center",
                                     }}
                                 >
-                                    <CrimsonButton content='XEM NGAY' onClick={() => {console.log('abc')}} type={'midnightBlue'}></CrimsonButton>
+                                    <CrimsonButton
+                                        content="XEM NGAY"
+                                        onClick={() => {
+                                            console.log("abc");
+                                        }}
+                                        type={"midnightBlue"}
+                                    ></CrimsonButton>
                                 </div>
                             </Stack>
                         </CardContent>
@@ -88,22 +99,31 @@ export default function IntroduceBanner() {
                                     variant="body2"
                                     sx={{ lineHeight: "22px" }}
                                 >
-                                    Một sản phẩm đẹp cần nhiều thời gian để thực hiện, và còn cần thêm hàng chục những bàn tay nhân sự tham gia vào quá trình xây dựng và phát triển, hãy cùng tìm hiểu nhé
+                                    Một sản phẩm đẹp cần nhiều thời gian để thực
+                                    hiện, và còn cần thêm hàng chục những bàn
+                                    tay nhân sự tham gia vào quá trình xây dựng
+                                    và phát triển, hãy cùng tìm hiểu nhé
                                 </Typography>
                                 <div
                                     style={{
                                         display: "flex",
                                         justifyContent: "center",
-                                        marginTop: '38px'
+                                        marginTop: "38px",
                                     }}
                                 >
-                                    <CrimsonButton content='XEM THÊM' onClick={() => {console.log('abc')}} type={'crimson'}></CrimsonButton>
+                                    <CrimsonButton
+                                        content="XEM THÊM"
+                                        onClick={() => {
+                                            console.log("abc");
+                                        }}
+                                        type={"crimson"}
+                                    ></CrimsonButton>
                                 </div>
                             </Stack>
                         </CardContent>
                     </Card>
                 </Grid>
             </Grid>
-        </div>
+        </Container>
     );
 }

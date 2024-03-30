@@ -4,8 +4,11 @@ import LivingIcon from '@mui/icons-material/Living';
 import CountertopsIcon from '@mui/icons-material/Countertops';
 import BedroomChildIcon from '@mui/icons-material/BedroomChild';
 import { COLORS } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
+
+	const navigate = useNavigate();
 	return (
 		<Container
 			sx={{
@@ -70,6 +73,7 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
+						onClick={() => { navigate('/mau-nha-dep');}}
 					>
 						<Box
 							sx={{
@@ -120,6 +124,7 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
+						onClick={() => { navigate('/phong-khach');}}
 					>
 						<Box
 							sx={{
@@ -170,6 +175,7 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
+						onClick={() => { navigate('/phong-bep');}}
 					>
 						<Box
 							sx={{
@@ -220,6 +226,7 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
+						onClick={() => { navigate('/phong-ngu');}}
 					>
 						<Box
 							sx={{
@@ -270,6 +277,7 @@ const Categories = () => {
 								transition: '0.3s',
 							},
 						}}
+						onClick={() => { navigate('/ban-cong');}}
 					>
 						<Box
 							sx={{
