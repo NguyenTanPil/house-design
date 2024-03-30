@@ -88,7 +88,10 @@ const ShortChannel = () => {
 								<PlayCircleOutlineOutlinedIcon
 									fontSize='large'
 									sx={{
-										fontSize: '4rem',
+										fontSize: {
+											xs: '2.5rem',
+											md: '4rem',
+										},
 										color: COLORS.selectedColor,
 									}}
 								/>
@@ -127,7 +130,10 @@ const ShortChannel = () => {
 								<PlayCircleOutlineOutlinedIcon
 									fontSize='large'
 									sx={{
-										fontSize: '4rem',
+										fontSize: {
+											xs: '2.5rem',
+											md: '4rem',
+										},
 										color: COLORS.selectedColor,
 									}}
 								/>
@@ -166,7 +172,10 @@ const ShortChannel = () => {
 								<PlayCircleOutlineOutlinedIcon
 									fontSize='large'
 									sx={{
-										fontSize: '4rem',
+										fontSize: {
+											xs: '2.5rem',
+											md: '4rem',
+										},
 										color: COLORS.selectedColor,
 									}}
 								/>
@@ -205,7 +214,10 @@ const ShortChannel = () => {
 								<PlayCircleOutlineOutlinedIcon
 									fontSize='large'
 									sx={{
-										fontSize: '4rem',
+										fontSize: {
+											xs: '2.5rem',
+											md: '4rem',
+										},
 										color: COLORS.selectedColor,
 									}}
 								/>

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
 	const navigate = useNavigate();
+
 	return (
 		<Container
 			sx={{
@@ -64,14 +65,15 @@ const Categories = () => {
 							xs: '1rem',
 							md: '2rem',
 						},
-						paddingLeft: {
-							xs: '1rem',
-							md: '2rem',
+						paddingX: {
+							xs: '0.5rem',
+							md: '1rem',
 						},
 					}}
 				>
 					<Box
 						sx={{
+							cursor: 'pointer',
 							backgroundColor: COLORS.backgroundColor,
 							border: `2px solid ${COLORS.borderColor}`,
 							display: 'flex',
@@ -88,7 +90,6 @@ const Categories = () => {
 					>
 						<Box
 							sx={{
-								cursor: 'pointer',
 								width: {
 									sx: '3rem',
 									md: '4rem',
@@ -112,7 +113,6 @@ const Categories = () => {
 						</Box>
 						<Typography
 							sx={{
-								cursor: 'pointer',
 								pb: '2rem',
 								color: COLORS.textColor,
 								'&:hover': {
@@ -134,9 +134,9 @@ const Categories = () => {
 							xs: '1rem',
 							md: '2rem',
 						},
-						paddingLeft: {
-							xs: '1rem',
-							md: '2rem',
+						paddingX: {
+							xs: '0.5rem',
+							md: '1rem',
 						},
 					}}
 				>
@@ -204,9 +204,9 @@ const Categories = () => {
 							xs: '1rem',
 							md: '2rem',
 						},
-						paddingLeft: {
-							xs: '1rem',
-							md: '2rem',
+						paddingX: {
+							xs: '0.5rem',
+							md: '1rem',
 						},
 					}}
 				>
@@ -274,9 +274,9 @@ const Categories = () => {
 							xs: '1rem',
 							md: '2rem',
 						},
-						paddingLeft: {
-							xs: '1rem',
-							md: '2rem',
+						paddingX: {
+							xs: '0.5rem',
+							md: '1rem',
 						},
 					}}
 				>
@@ -344,9 +344,9 @@ const Categories = () => {
 							xs: '1rem',
 							md: '2rem',
 						},
-						paddingLeft: {
-							xs: '1rem',
-							md: '2rem',
+						paddingX: {
+							xs: '0.5rem',
+							md: '1rem',
 						},
 					}}
 				>

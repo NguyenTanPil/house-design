@@ -69,8 +69,8 @@ const Banner = () => {
 													color: COLORS.titleColor,
 													textOverflow: 'ellipsis',
 													display: '-webkit-box',
-													webkitLineClamp: '2',
-													webkitBoxOrient: 'vertical',
+													'-webkit-line-clamp': '2',
+													'-webkit-box-orient': 'vertical',
 													overflow: 'hidden',
 												}}
 											>
