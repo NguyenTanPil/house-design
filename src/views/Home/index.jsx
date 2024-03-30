@@ -10,7 +10,7 @@ import Breadcrumb from '../../components/Breadcrumbs';
 import IntroduceBanner from '../../components/IntroduceBanner';
 import Box from '@mui/material/Box';
 import PopularCategories from '../../components/PopularCategories';
-import { newArchitecture } from '../../dummy';
+import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
 
 const Home = () => {
 	const { category } = useParams();
@@ -30,22 +30,26 @@ const Home = () => {
 					<ShortChannel />
 					<PopularCategories
 						items={newArchitecture}
+						imageHeight={180}
 						title='KIẾN TRÚC MỚI'
 						subTitle='New Architecture'
 					/>
 					<PopularCategories
-						items={newArchitecture}
+						items={interiorDesign}
+						imageHeight={180}
 						title='THI CÔNG MỚI'
 						subTitle='New Contruction'
 					/>
 					<PopularCategories
 						items={newArchitecture}
+						imageHeight={180}
 						title='NỘI THẤT MỚI'
 						subTitle='New Interior Design'
 					/>
 					<PopularCategories
-						items={newArchitecture}
+						items={tiktokStories}
 						perPage={5}
+						imageHeight={240}
 						title='SHORT VIDEO'
 						subTitle='Decox on tiktok'
 					/>

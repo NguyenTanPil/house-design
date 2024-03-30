@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import PropTypes from 'prop-types';
 import { COLORS } from '../../constants';
 
-const PopularCategories = ({ items, title, subTitle, perPage }) => {
+const PopularCategories = ({ items, title, subTitle, perPage, imageHeight }) => {
 	return (
 		<Container sx={{ mt: 4 }}>
 			<Grid
@@ -71,7 +71,7 @@ const PopularCategories = ({ items, title, subTitle, perPage }) => {
 										}}
 									>
 										<CardMedia
-											sx={{ height: 180 }}
+											sx={{ height: imageHeight }}
 											image={item.imgUrl}
 										/>
 										<CardContent sx={{ pl: 0, pb: '0.5rem !important' }}>
@@ -79,7 +79,16 @@ const PopularCategories = ({ items, title, subTitle, perPage }) => {
 												gutterBottom
 												variant='h6'
 												component='div'
-												sx={{ fontSize: '1rem', color: COLORS.titleColor }}
+												sx={{
+													fontSize: '1rem',
+													mb: 0,
+													color: COLORS.titleColor,
+													textOverflow: 'ellipsis',
+													display: '-webkit-box',
+													'-webkit-line-clamp': '2',
+													'-webkit-box-orient': 'vertical',
+													overflow: 'hidden',
+												}}
 											>
 												{item.title}
 											</Typography>
@@ -87,6 +96,13 @@ const PopularCategories = ({ items, title, subTitle, perPage }) => {
 												<Typography
 													variant='body2'
 													color={COLORS.textColor}
+													sx={{
+														textOverflow: 'ellipsis',
+														display: '-webkit-box',
+														'-webkit-line-clamp': '2',
+														'-webkit-box-orient': 'vertical',
+														overflow: 'hidden',
+													}}
 												>
 													{item.desc}
 												</Typography>
@@ -108,6 +124,7 @@ PopularCategories.propTypes = {
 	items: PropTypes.array,
 	perPage: PropTypes.number,
 	subTitle: PropTypes.string,
+	imageHeight: PropTypes.string,
 };
 
 PopularCategories.defaultProps = {
