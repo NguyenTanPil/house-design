@@ -8,6 +8,14 @@ const getTextTranslateBreadcrumb = (str) => {
     switch (str) {
         case "mau-nha-dep":
             return "Mẫu Nhà Đẹp";
+        case "phong-khach":
+            return "Phòng Khách";
+            case "phong-bep":
+                return 'Phòng Bếp';
+            case "phong-ngu":
+                return 'Phòng Ngủ';
+            case "ban-cong":
+                return 'Ban Công';
         default:
             return "";
     }
@@ -20,7 +28,7 @@ export default function Breadcrumb() {
         <div
             style={{
                 backgroundColor: "#f7f7f7",
-                width: "65%",
+                width: "60%",
                 padding: "8px 0px 8px 4px",
                 border: "1px solid #ececec",
                 boxSizing: "content-box",
