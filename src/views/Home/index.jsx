@@ -13,6 +13,7 @@ import PopularCategories from '../../components/PopularCategories';
 import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
 import DesignByAi from '../../components/DesignByAi';
 import DesignInspiration from '../../components/DesignInspiration';
+import Banner from '../../components/Banner';
 
 const Home = () => {
 	const { category } = useParams();
@@ -57,6 +58,7 @@ const Home = () => {
 					/>
 					<DesignByAi />
 					<DesignInspiration />
+					<Banner />
 				</Box>
 			) : (
 				<Box

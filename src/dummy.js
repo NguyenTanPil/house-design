@@ -254,3 +254,46 @@ export const designByAi = [
 		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-silver-townhouse.jpg',
 	},
 ];
+
+export const banner = [
+	{
+		id: 'a1',
+		title: '[Bật mí] 6 Cách trang trí cầu thang bằng cây xanh đơn giản mà đẹp',
+		imgUrl:
+			'https://decoxdesign.com/upload/sanpham/bat-mi-6-cach-trang-tri-cau-thang-bang-cay-xanh-don-gian-ma-dep.jpg',
+	},
+	{
+		id: 'a2',
+		title: 'BST 20+ Mẫu thiết kế sân vườn 200m2 cao cấp, đẹp không lối thoát',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/bst-20-mau-thiet-ke-san-vuon-200m2-cao-cap-dep-khong-loi-thoat.jpg',
+	},
+	{
+		id: 'a3',
+		title: 'Gạch không nung là gì? Top 4 loại gạch không nung phổ biến nhất hiện nay',
+		imgUrl:
+			'https://decoxdesign.com/upload/sanpham/gach-khong-nung-la-gi-top-4-loai-gach-khong-nung-pho-bien-nhat-hien-nay.jpg',
+	},
+	{
+		id: 'a4',
+		title: '[TOP 20] Cây xanh trong phòng khách may mắn, hút tài lộc cực đỉnh',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/top-20-cay-xanh-trong-phong-khach-may-man-hut-tai-loc-cuc-dinh.jpg',
+	},
+	{
+		id: 'a5',
+		title: 'Vật liệu xanh là gì? Các loại vật liệu xanh trong xây dựng phổ biến',
+		imgUrl:
+			'https://decoxdesign.com/upload/sanpham/vat-lieu-xanh-la-gi-cac-loai-vat-lieu-xanh-trong-xay-dung-pho-bien.jpg',
+	},
+	{
+		id: 'a6',
+		title: '[TOP 10] Mẫu thiết kế sân vườn 2000m2 đẹp dành cho nghỉ dưỡng 2024',
+		imgUrl:
+			'https://decoxdesign.com/upload/sanpham/top-10-mau-thiet-ke-san-vuon-2000m2-dep-danh-cho-nghi-duong-2024.jpg',
+	},
+	{
+		id: 'a7',
+		title: '20+ Mẫu thiết kế sân vườn 1000m2 đẹp, ấn tượng phù hợp nghỉ dưỡng',
+		imgUrl:
+			'https://decoxdesign.com/upload/sanpham/20-mau-thiet-ke-san-vuon-1000m2-dep-an-tuong-phu-hop-nghi-duong.jpg',
+	},
+];
