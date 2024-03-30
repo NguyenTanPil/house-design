@@ -76,13 +76,12 @@ const Header = () => {
 				}}
 			>
 				<Container>
-					<Toolbar>
+					<Toolbar sx={{ mx: '-1.125rem' }}>
 						<Box
 							sx={{
 								flexGrow: 1,
 								display: 'flex',
 								alignItems: 'center',
-								ml: '-18px',
 								px: 0,
 							}}
 						>
