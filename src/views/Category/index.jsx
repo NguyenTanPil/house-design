@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import CategoriesFilter from '../../components/CategoriesFilter';
 import MasonryImageList from '../../components/GalleryImage';
@@ -27,14 +27,16 @@ export default function Category() {
 		<>
 			<CategoriesFilter />
 			<MasonryImageList data={galleryDataSource?.[`${getCategory()}`]} />
-			<Box
-				sx={{
-					borderBottom: `1px dashed ${COLORS.borderColor}`,
-					height: '2px',
-					width: '100%',
-					margin: '44px 0px 20px 0',
-				}}
-			/>
+			<Container>
+				<Box
+					sx={{
+						borderBottom: `1px dashed ${COLORS.borderColor}`,
+						height: '2px',
+						width: '100%',
+						margin: '44px 0px 20px 0',
+					}}
+				/>
+			</Container>
 		</>
 	);
 }
