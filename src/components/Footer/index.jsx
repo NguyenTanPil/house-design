@@ -13,6 +13,8 @@ import {
 	Typography,
 } from '@mui/material';
 import { COLORS } from '../../constants';
+import logo from '../../assets/images/logo_3.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -32,12 +34,25 @@ const Footer = () => {
 					>
 						<ImageListItem>
 							<Box>
-								<Typography
-									variant='h5'
-									sx={{ mb: '1rem', color: COLORS.backgroundColor }}
+								<Box
+									sx={{
+										a: {
+											marginLeft: '-0.25rem',
+											display: 'block',
+											height: '54px',
+											width: 'fit-content',
+										},
+									}}
 								>
-									DUC TOAN
-								</Typography>
+									<Link to='/'>
+										<img
+											width={132}
+											height={54}
+											src={logo}
+											alt='logo'
+										/>
+									</Link>
+								</Box>
 								<Typography
 									variant='body1'
 									sx={{ color: COLORS.colorFooter }}

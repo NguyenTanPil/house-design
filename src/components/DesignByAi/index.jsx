@@ -30,7 +30,13 @@ const DesignByAi = () => {
 				gap={8}
 			>
 				{designByAi.map((item) => (
-					<ImageListItem key={item.id}>
+					<ImageListItem
+						key={item.id}
+						sx={{
+							cursor: 'pointer',
+						}}
+						onClick={() => navigate(`/details/${item.title}`)}
+					>
 						<img
 							src={item.imgUrl}
 							alt=''
@@ -49,6 +55,11 @@ const DesignByAi = () => {
 								'-webkit-line-clamp': '2',
 								'-webkit-box-orient': 'vertical',
 								overflow: 'hidden',
+
+								'&:hover': {
+									transition: '0.3s ease-in-out',
+									color: COLORS.selectedColor,
+								},
 							}}
 						>
 							{item.title}

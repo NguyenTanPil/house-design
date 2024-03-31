@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Footer from '../Footer';
 import Header from '../Header';
 import IntroduceBanner from '../IntroduceBanner';
@@ -16,6 +16,7 @@ const RootApp = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<RootAppContainer>
+				<ScrollRestoration />
 				<Header />
 				<Outlet />
 				<IntroduceBanner />

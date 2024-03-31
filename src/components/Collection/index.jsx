@@ -2,8 +2,11 @@ import { Box, Container, ImageListItem, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { COLORS } from '../../constants';
 import { collection } from '../../dummy';
+import { useNavigate } from 'react-router-dom';
 
 const Collection = () => {
+	const navigate = useNavigate();
+
 	return (
 		<Container sx={{ mt: 8 }}>
 			<Typography
@@ -44,7 +47,9 @@ const Collection = () => {
 							sx={{
 								position: 'relative',
 								height: '100% !important',
+								cursor: 'pointer',
 							}}
+							onClick={() => navigate(`/details/${item.text}`)}
 						>
 							<img
 								src={item.imgUrl}

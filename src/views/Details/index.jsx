@@ -134,28 +134,28 @@ const Details = () => {
 											aria-label='contacts'
 										>
 											<ListItem disablePadding>
-												<ListItemIcon>Name</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Name</ListItemIcon>
 												<ListItemText
 													primary='Centenial house'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon>Area</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Area</ListItemIcon>
 												<ListItemText
 													primary='400m2'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon>Style</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Style</ListItemIcon>
 												<ListItemText
 													primary='Indochine'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon>Design</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Design</ListItemIcon>
 												<ListItemText
 													primary='Decox'
 													sx={{ mb: 0 }}

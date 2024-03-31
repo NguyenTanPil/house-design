@@ -4,8 +4,8 @@ import Link from '@mui/material/Link';
 import { useParams } from 'react-router-dom';
 import { COLORS } from '../../constants';
 
-const getTextTranslateBreadcrumb = (str) => {
-	switch (str) {
+const getTextTranslateBreadcrumb = ({ category, popularId, detailId }) => {
+	switch (category) {
 		case 'mau-nha-dep':
 			return 'Mẫu Nhà Đẹp';
 		case 'phong-khach':
@@ -17,12 +17,22 @@ const getTextTranslateBreadcrumb = (str) => {
 		case 'ban-cong':
 			return 'Ban Công';
 		default:
+			if (popularId) {
+				return popularId.replace('-', ' ');
+			}
+
+			if (detailId) {
+				return detailId;
+			}
+
 			return '';
 	}
 };
 
 export default function Breadcrumb() {
-	const { category } = useParams();
+	const params = useParams();
+
+	const breadcrumbText = getTextTranslateBreadcrumb(params);
 
 	return (
 		<Box
@@ -63,7 +73,7 @@ export default function Breadcrumb() {
 					zIndex: 2,
 				}}
 			>
-				Mẫu Nhà Đẹp
+				{breadcrumbText}
 			</Typography>
 			<Breadcrumbs
 				aria-label='breadcrumb'
@@ -88,13 +98,14 @@ export default function Breadcrumb() {
 				<Typography
 					sx={{
 						fontSize: '1rem',
+						textTransform: 'capitalize',
 						// '&:hover': {
 						// 	transition: '0.3s ease-in-out',
 						// 	color: COLORS.selectedColor,
 						// },
 					}}
 				>
-					{getTextTranslateBreadcrumb(category)}
+					{breadcrumbText}
 				</Typography>
 				{/* <Link
           underline="hover"

@@ -73,7 +73,12 @@ const PopularCategories = ({ items, titleUrl, title, subTitle, perPage, imageHei
 					>
 						{items.map((item) => (
 							<SplideSlide key={item.id}>
-								<ImageListItem>
+								<ImageListItem
+									sx={{
+										cursor: 'pointer',
+									}}
+									onClick={() => navigate(`/details/${item.title}`)}
+								>
 									<Card
 										sx={{
 											borderRadius: '0',
@@ -98,6 +103,11 @@ const PopularCategories = ({ items, titleUrl, title, subTitle, perPage, imageHei
 													'-webkit-line-clamp': '2',
 													'-webkit-box-orient': 'vertical',
 													overflow: 'hidden',
+
+													'&:hover': {
+														transition: '0.3s ease-in-out',
+														color: COLORS.selectedColor,
+													},
 												}}
 											>
 												{item.title}

@@ -1,6 +1,9 @@
 import { Container, ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Signature = () => {
+	const navigate = useNavigate();
+
 	return (
 		<Container
 			sx={{
@@ -23,7 +26,12 @@ const Signature = () => {
 				cols={2}
 				gap={8}
 			>
-				<ImageListItem>
+				<ImageListItem
+					sx={{
+						cursor: 'pointer',
+					}}
+					onClick={() => navigate('/details/house1')}
+				>
 					<img
 						src='https://decoxdesign.com/upload/sanpham/large/centenial-house.jpg'
 						alt=''
@@ -34,7 +42,12 @@ const Signature = () => {
 						subtitle='For new home construction, ElectroServ is one of the largest service providers'
 					/>
 				</ImageListItem>
-				<ImageListItem>
+				<ImageListItem
+					sx={{
+						cursor: 'pointer',
+					}}
+					onClick={() => navigate('/details/house1')}
+				>
 					<ImageList cols={1}>
 						<ImageListItem>
 							<img
@@ -47,7 +60,12 @@ const Signature = () => {
 								subtitle='For new home construction, ElectroServ is one of the largest service providers'
 							/>
 						</ImageListItem>
-						<ImageListItem>
+						<ImageListItem
+							sx={{
+								cursor: 'pointer',
+							}}
+							onClick={() => navigate('/details/house1')}
+						>
 							<img
 								src='https://decoxdesign.com/upload/sanpham/d9-villa.jpg'
 								alt=''
@@ -58,7 +76,12 @@ const Signature = () => {
 								subtitle='For new home construction, ElectroServ is one of the largest service providers'
 							/>
 						</ImageListItem>
-						<ImageListItem>
+						<ImageListItem
+							sx={{
+								cursor: 'pointer',
+							}}
+							onClick={() => navigate('/details/house1')}
+						>
 							<img
 								src='https://decoxdesign.com/upload/sanpham/annam-villa.jpg'
 								alt=''

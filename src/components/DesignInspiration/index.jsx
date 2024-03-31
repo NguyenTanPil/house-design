@@ -30,7 +30,13 @@ const DesignInspiration = () => {
 				gap={8}
 			>
 				{designByAi.map((item) => (
-					<ImageListItem key={item.id}>
+					<ImageListItem
+						key={item.id}
+						sx={{
+							cursor: 'pointer',
+						}}
+						onClick={() => navigate(`/details/${item.title}`)}
+					>
 						<Card
 							sx={{
 								borderRadius: '0',
@@ -55,6 +61,11 @@ const DesignInspiration = () => {
 										'-webkit-line-clamp': '2',
 										'-webkit-box-orient': 'vertical',
 										overflow: 'hidden',
+
+										'&:hover': {
+											transition: '0.3s ease-in-out',
+											color: COLORS.selectedColor,
+										},
 									}}
 								>
 									{item.title}
@@ -63,6 +74,7 @@ const DesignInspiration = () => {
 									variant='body2'
 									color={COLORS.textColor}
 									sx={{
+										cursor: 'default',
 										textOverflow: 'ellipsis',
 										display: '-webkit-box',
 										'-webkit-line-clamp': '3',

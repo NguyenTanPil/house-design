@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, Container, ImageList, ImageListItem, Typography } from '@mui/material';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumbs';
 import { designByAi } from '../../dummy';
 import { COLORS } from '../../constants';
@@ -7,6 +7,7 @@ import LoadMoreButton from '../../components/LoadMoreButton';
 
 const Popular = () => {
 	const { popularId } = useParams();
+	const navigate = useNavigate();
 	console.log({ popularId });
 
 	return (
@@ -25,9 +26,13 @@ const Popular = () => {
 					gap={8}
 				>
 					{designByAi.map((item) => (
-						<ImageListItem key={item.id}>
+						<ImageListItem
+							key={item.id}
+							onClick={() => navigate(`/details/${item.title}`)}
+						>
 							<Card
 								sx={{
+									cursor: 'pointer',
 									borderRadius: '0',
 									boxShadow: 'none',
 								}}
@@ -50,6 +55,11 @@ const Popular = () => {
 											'-webkit-line-clamp': '2',
 											'-webkit-box-orient': 'vertical',
 											overflow: 'hidden',
+
+											'&:hover': {
+												transition: '0.3s ease-in-out',
+												color: COLORS.selectedColor,
+											},
 										}}
 									>
 										{item.title}

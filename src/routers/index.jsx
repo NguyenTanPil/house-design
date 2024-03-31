@@ -15,7 +15,7 @@ const Routers = () => {
 					element: <Home />,
 				},
 				{
-					path: '/details/:id',
+					path: '/details/:detailId',
 					element: <Details />,
 				},
 				{
