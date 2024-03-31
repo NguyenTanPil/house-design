@@ -8,8 +8,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 import { COLORS } from '../../constants';
-import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -57,7 +58,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Header = () => {
-	const navigate = useNavigate();
 	const [open, setOpen] = useState(false);
 
 	const toggleDrawer = (newOpen) => () => {
@@ -93,18 +93,23 @@ const Header = () => {
 								px: 0,
 							}}
 						>
-							<Typography
-								variant='h6'
-								noWrap
-								component='div'
-								color='text.primary'
-								sx={{ display: { xs: 'block' } }}
-								onClick={() => {
-									navigate('/');
+							<Box
+								sx={{
+									a: {
+										display: 'block',
+										height: '54px',
+									},
 								}}
 							>
-								DUC TOAN
-							</Typography>
+								<Link to='/'>
+									<img
+										width={132}
+										height={54}
+										src={logo}
+										alt='logo'
+									/>
+								</Link>
+							</Box>
 
 							<Box sx={{ ml: '1rem', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 								<MenuItem

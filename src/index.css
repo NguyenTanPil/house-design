@@ -1,5 +1,15 @@
+@font-face {
+	font-family: 'UTM Nokia Standard';
+	src: url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.eot');
+	src: url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.eot?#iefix') format('embedded-opentype'),
+		url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.woff2') format('woff2'),
+		url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.woff') format('woff'),
+		url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.ttf') format('truetype'),
+		url('https://db.onlinewebfonts.com/t/e80855afe0b92ce3e8867d37f7f0e1ea.svg#UTM Nokia Standard') format('svg');
+}
+
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'utmNokia', system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 

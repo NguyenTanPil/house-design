@@ -3,7 +3,7 @@ export const COLORS = {
 	mainColor_2: '#f5ef81',
 	mainColor_3: '#b98a2d',
 	borderColor: '#e3e8ec',
-	selectedColor: '#f7b72f',
+	selectedColor: '#b98a2d',
 	textColor: '#909193',
 	titleColor: '#25262e',
 	backgroundColor: '#ffffff',

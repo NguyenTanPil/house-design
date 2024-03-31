@@ -4,16 +4,25 @@ import Header from '../Header';
 import IntroduceBanner from '../IntroduceBanner';
 import { RootAppContainer } from './RootAppStyles';
 import ScrollToTop from '../ScrollToTop';
+import { ThemeProvider, createMuiTheme } from '@mui/material';
+
+const theme = createMuiTheme({
+	typography: {
+		fontFamily: "'UTM Nokia Standard', 'Roboto', 'Arial', sans-serif",
+	},
+});
 
 const RootApp = () => {
 	return (
-		<RootAppContainer>
-			<Header />
-			<Outlet />
-			<IntroduceBanner />
-			<Footer />
-			<ScrollToTop />
-		</RootAppContainer>
+		<ThemeProvider theme={theme}>
+			<RootAppContainer>
+				<Header />
+				<Outlet />
+				<IntroduceBanner />
+				<Footer />
+				<ScrollToTop />
+			</RootAppContainer>
+		</ThemeProvider>
 	);
 };
 
