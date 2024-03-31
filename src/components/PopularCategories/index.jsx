@@ -2,8 +2,11 @@ import { Card, CardContent, CardMedia, Container, Grid, ImageListItem, Typograph
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import PropTypes from 'prop-types';
 import { COLORS } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 
-const PopularCategories = ({ items, title, subTitle, perPage, imageHeight }) => {
+const PopularCategories = ({ items, titleUrl, title, subTitle, perPage, imageHeight }) => {
+	const navigate = useNavigate();
+
 	return (
 		<Container sx={{ mt: 4 }}>
 			<Grid
@@ -19,12 +22,19 @@ const PopularCategories = ({ items, title, subTitle, perPage, imageHeight }) => 
 					<Typography
 						variant='h2'
 						sx={{
+							cursor: 'pointer',
 							mt: '0.5rem',
 							textAlign: { xs: 'center', md: 'start' },
 							fontSize: '1.25rem',
 							fontWeight: '700',
 							color: COLORS.titleColor,
+
+							'&:hover': {
+								transition: '0.3s ease',
+								color: COLORS.selectedColor,
+							},
 						}}
+						onClick={() => navigate(titleUrl)}
 					>
 						{title}
 					</Typography>
@@ -124,6 +134,7 @@ PopularCategories.propTypes = {
 	items: PropTypes.array,
 	perPage: PropTypes.number,
 	subTitle: PropTypes.string,
+	titleUrl: PropTypes.string,
 	imageHeight: PropTypes.number,
 };
 

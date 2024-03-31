@@ -14,6 +14,7 @@ import DesignByAi from '../../components/DesignByAi';
 import DesignInspiration from '../../components/DesignInspiration';
 import Banner from '../../components/Banner';
 import Category from '../Category';
+import { Container } from '@mui/material';
 
 const Home = () => {
 	const { category } = useParams();
@@ -32,24 +33,28 @@ const Home = () => {
 					<Collection />
 					<ShortChannel />
 					<PopularCategories
+						titleUrl='/popular/new-architecture'
 						items={newArchitecture}
 						imageHeight={180}
 						title='KIẾN TRÚC MỚI'
 						subTitle='New Architecture'
 					/>
 					<PopularCategories
+						titleUrl='/popular/contruction'
 						items={interiorDesign}
 						imageHeight={180}
 						title='THI CÔNG MỚI'
 						subTitle='New Contruction'
 					/>
 					<PopularCategories
+						titleUrl='/popular/interior-design'
 						items={newArchitecture}
 						imageHeight={180}
 						title='NỘI THẤT MỚI'
 						subTitle='New Interior Design'
 					/>
 					<PopularCategories
+						titleUrl='/popular/tiktok'
 						items={tiktokStories}
 						perPage={5}
 						imageHeight={240}
@@ -61,7 +66,7 @@ const Home = () => {
 					<Banner />
 				</Box>
 			) : (
-				<Box
+				<Container
 					sx={{
 						display: 'flex',
 						justifyContent: 'center',
@@ -71,7 +76,7 @@ const Home = () => {
 				>
 					<Breadcrumb />
 					<Category />
-				</Box>
+				</Container>
 			)}
 		</>
 	);

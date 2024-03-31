@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 import { COLORS } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -56,6 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Header = () => {
+	const navigate = useNavigate();
 	const [open, setOpen] = useState(false);
 
 	const toggleDrawer = (newOpen) => () => {
@@ -97,6 +99,9 @@ const Header = () => {
 								component='div'
 								color='text.primary'
 								sx={{ display: { xs: 'block' } }}
+								onClick={() => {
+									navigate('/');
+								}}
 							>
 								DUC TOAN
 							</Typography>

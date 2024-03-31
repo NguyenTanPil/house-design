@@ -1,8 +1,12 @@
-import { Card, CardContent, CardMedia, Container, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Container, ImageList, ImageListItem, Typography } from '@mui/material';
 import { designByAi } from '../../dummy';
 import { COLORS } from '../../constants';
+import LoadMoreButton from '../LoadMoreButton';
+import { useNavigate } from 'react-router-dom';
 
 const DesignInspiration = () => {
+	const navigate = useNavigate();
+
 	return (
 		<Container sx={{ mt: 8 }}>
 			<Typography
@@ -75,6 +79,18 @@ const DesignInspiration = () => {
 					</ImageListItem>
 				))}
 			</ImageList>
+			<Box
+				sx={{
+					mt: '1.6rem',
+					display: 'flex',
+					justifyContent: 'center',
+				}}
+			>
+				<LoadMoreButton
+					content='see more'
+					onClick={() => navigate('/popular/design-inspiration')}
+				/>
+			</Box>
 		</Container>
 	);
 };

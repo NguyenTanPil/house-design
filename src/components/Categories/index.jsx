@@ -1,10 +1,11 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
-import CottageIcon from '@mui/icons-material/Cottage';
-import LivingIcon from '@mui/icons-material/Living';
-import CountertopsIcon from '@mui/icons-material/Countertops';
 import BedroomChildIcon from '@mui/icons-material/BedroomChild';
-import { COLORS } from '../../constants';
+import CottageIcon from '@mui/icons-material/Cottage';
+import CountertopsIcon from '@mui/icons-material/Countertops';
+import LivingIcon from '@mui/icons-material/Living';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { COLORS } from '../../constants';
+import LoadMoreButton from '../LoadMoreButton';
 
 const Categories = () => {
 	const navigate = useNavigate();
@@ -413,21 +414,7 @@ const Categories = () => {
 					justifyContent: 'center',
 				}}
 			>
-				<Button
-					sx={{
-						color: COLORS.backgroundColor,
-						backgroundColor: COLORS.selectedColor,
-						padding: '0.75rem 2.5rem',
-						borderRadius: '0',
-						'&:hover': {
-							backgroundColor: COLORS.titleColor,
-							transition: '0.3s ease-in',
-						},
-					}}
-					variant='contained'
-				>
-					MORE SERVICES
-				</Button>
+				<LoadMoreButton content='more services' />
 			</Box>
 		</Container>
 	);

@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RootApp from '../components/RootApp';
 import Home from '../views/Home';
+import Popular from '../views/Popular';
 // import Details from '../views/Details';
 
 const Routers = () => {
@@ -20,6 +21,10 @@ const Routers = () => {
 				{
 					path: ':category',
 					element: <Home />,
+				},
+				{
+					path: '/popular/:popularId',
+					element: <Popular />,
 				},
 			],
 		},
