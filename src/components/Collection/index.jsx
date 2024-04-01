@@ -3,36 +3,38 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { COLORS } from '../../constants';
 import { collection } from '../../dummy';
 import { useNavigate } from 'react-router-dom';
+import { Grid } from '@splidejs/splide-extension-grid';
+import TitleSection from '../TitleSection';
 
 const Collection = () => {
 	const navigate = useNavigate();
 
 	return (
 		<Container sx={{ mt: 8 }}>
-			<Typography
-				variant='h6'
-				sx={{
-					mb: 2,
-					textTransform: 'uppercase',
-					fontWeight: '500',
-				}}
-			>
-				Our Collection
-			</Typography>
+			<TitleSection
+				title='DECOX SIGNATURE'
+				subTitle='Collection'
+			/>
 			<Splide
+				extensions={{ Grid }}
 				options={{
-					type: 'loop',
+					type: 'slide',
 					autoplay: true,
-					drag: 'free',
 					start: 1,
-					perPage: 2,
-					pagination: false,
-					gap: 6,
+					pagination: true,
 					focus: 'center',
 					arrows: false,
-					fixedHeight: '280px',
+					fixedHeight: '460px',
 					autoScroll: {
 						speed: 2,
+					},
+					grid: {
+						rows: 2,
+						cols: 3,
+						gap: {
+							row: '0.5rem',
+							col: '0.5rem',
+						},
 					},
 					breakpoints: {
 						900: {

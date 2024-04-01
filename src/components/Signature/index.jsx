@@ -1,5 +1,6 @@
-import { Container, ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
+import { Container, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import TitleSection from '../TitleSection';
 
 const Signature = () => {
 	const navigate = useNavigate();
@@ -10,15 +11,7 @@ const Signature = () => {
 				mt: 8,
 			}}
 		>
-			<Typography
-				variant='h6'
-				sx={{
-					textTransform: 'uppercase',
-					fontWeight: '500',
-				}}
-			>
-				Signature Design
-			</Typography>
+			<TitleSection title='Signature Design' />
 			<ImageList
 				sx={{
 					gridTemplateColumns: '4fr 2fr !important',
