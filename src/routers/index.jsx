@@ -3,6 +3,7 @@ import RootApp from '../components/RootApp';
 import Home from '../views/Home';
 import Popular from '../views/Popular';
 import Details from '../views/Details';
+import Category from '../views/Category';
 
 const Routers = () => {
 	const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const Routers = () => {
 				},
 				{
 					path: ':category',
-					element: <Home />,
+					element: <Category />,
 				},
 				{
 					path: '/popular/:popularId',
