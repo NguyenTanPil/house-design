@@ -202,6 +202,96 @@ export const collection = [
 		text: 'Bammo villa',
 		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
 	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
+	{
+		id: 'c5',
+		text: 'Bammo villa',
+		imgUrl: 'https://decoxdesign.com/upload/sanpham/the-reverie-townhouse.jpg',
+	},
 ];
 
 export const designByAi = [

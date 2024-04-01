@@ -1,24 +1,15 @@
-import { Box, Container, ImageList, ImageListItem, Typography } from '@mui/material';
-import { designByAi } from '../../dummy';
-import { COLORS } from '../../constants';
-import LoadMoreButton from '../LoadMoreButton';
+import { Container, ImageList, ImageListItem, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { COLORS } from '../../constants';
+import { designByAi } from '../../dummy';
+import TitleSection from '../TitleSection';
 
 const DesignByAi = () => {
 	const navigate = useNavigate();
 
 	return (
 		<Container sx={{ mt: 8 }}>
-			<Typography
-				variant='h6'
-				sx={{
-					mb: 2,
-					textTransform: 'uppercase',
-					fontWeight: '500',
-				}}
-			>
-				Design By Ai
-			</Typography>
+			<TitleSection title='Design By Ai' />
 			<ImageList
 				sx={{
 					gridTemplateColumns: {
@@ -67,18 +58,6 @@ const DesignByAi = () => {
 					</ImageListItem>
 				))}
 			</ImageList>
-			<Box
-				sx={{
-					mt: '1.6rem',
-					display: 'flex',
-					justifyContent: 'center',
-				}}
-			>
-				<LoadMoreButton
-					content='see more'
-					onClick={() => navigate('/popular/design-inspiration')}
-				/>
-			</Box>
 		</Container>
 	);
 };
