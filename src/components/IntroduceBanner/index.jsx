@@ -5,9 +5,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import CrimsonButton from './CustomButton';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
+import { COLORS } from '../../constants';
+import PropTypes from 'prop-types';
+import LoadMoreButton from '../LoadMoreButton';
 
-export default function IntroduceBanner() {
+export default function IntroduceBanner({
+	isUsingOriginalButton,
+	imageUrl,
+	firstTitle,
+	firstDescription,
+	secondTitle,
+	secondDescription,
+	firstBtnText,
+	firstBtnAction,
+	secondBtnText,
+	secondBtnAction,
+}) {
 	return (
 		<Container
 			sx={{
@@ -17,104 +31,167 @@ export default function IntroduceBanner() {
 			<Grid
 				container
 				rowSpacing={1}
-				columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+				columnSpacing={{ xs: 1 }}
 			>
-				<Grid xs={4}>
-					<Card>
+				<Grid
+					item
+					xs={0}
+					md={5}
+					sx={{
+						padding: {
+							xs: 0,
+							md: '0.25rem',
+						},
+					}}
+				>
+					<Card sx={{ borderRadius: '0' }}>
 						<CardMedia
 							sx={{ height: 245 }}
-							image='https://decoxdesign.com/upload/banner/landscape.jpg'
+							image={imageUrl}
 							title='green iguana'
 						/>
 					</Card>
 				</Grid>
-				<Grid xs={4}>
+				<Grid
+					item
+					xs={6}
+					md={3.5}
+				>
 					<Card
 						sx={{
+							borderRadius: '0',
 							maxHeight: 245,
-							boxShadow: '0px 0px 3px 1px rgba(0,0,0,.16)',
+							boxShadow: 'none',
+							border: `1px solid ${COLORS.borderColor}`,
+							height: '100%',
 						}}
 					>
-						{/* <CardHeader title="Về Decox" /> */}
-						<CardContent>
+						<CardContent
+							sx={{
+								justifyContent: 'space-between',
+								display: 'flex',
+								flexDirection: 'column',
+								padding: '1rem 1rem 0.5rem !important',
+								height: '100%',
+								boxSizing: 'border-box',
+							}}
+						>
 							<Stack spacing={2}>
 								<Typography
 									variant='h5'
 									sx={{
-										color: '#264c5d',
-										fontWeight: 'bold',
+										color: COLORS.titleColor,
+										fontWeight: '600',
 									}}
 								>
-									Về Decox
+									{firstTitle}
 								</Typography>
 								<Typography
 									variant='body2'
-									sx={{ lineHeight: '22px' }}
-								>
-									10 năm kinh nghiệm trong lĩnh vực thiết kế kiến trúc nội thất tại Việt Nam, Decox mang đến những giá
-									trị sống mới, chuẩn mực mới, hãy để chúng tôi mang đến giá trị tinh thần và sự bền vững cho cuộc sống
-									của bạn. Tìm hiểu về Decox tại đây
-								</Typography>
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'center',
+									sx={{
+										mt: '0.25rem !important',
+										color: COLORS.textColor,
+										textOverflow: 'ellipsis',
+										display: '-webkit-box',
+										'-webkit-line-clamp': '6',
+										'-webkit-box-orient': 'vertical',
+										overflow: 'hidden',
 									}}
 								>
-									<CrimsonButton
-										content='XEM NGAY'
-										onClick={() => {
-											console.log('abc');
-										}}
-										type={'midnightBlue'}
-									></CrimsonButton>
-								</div>
+									{firstDescription}
+								</Typography>
 							</Stack>
+							<Box
+								sx={{
+									display: 'flex',
+									justifyContent: 'center',
+								}}
+							>
+								{isUsingOriginalButton ? (
+									<LoadMoreButton
+										isTransparentFirst={true}
+										content={firstBtnText}
+										onClick={firstBtnAction}
+									/>
+								) : (
+									<CrimsonButton
+										content={firstBtnText}
+										onClick={firstBtnAction}
+										type='midnightBlue'
+									/>
+								)}
+							</Box>
 						</CardContent>
 					</Card>
 				</Grid>
-				<Grid xs={4}>
+				<Grid
+					xs={6}
+					md={3.5}
+				>
 					<Card
 						sx={{
-							height: 245,
-							boxShadow: '0px 0px 3px 1px rgba(0,0,0,.16)',
+							borderRadius: '0',
+							maxHeight: 245,
+							boxShadow: 'none',
+							border: `1px solid ${COLORS.borderColor}`,
+							height: '100%',
 						}}
 					>
-						{/* <CardHeader title="Về Decox" /> */}
-						<CardContent>
+						<CardContent
+							sx={{
+								justifyContent: 'space-between',
+								display: 'flex',
+								flexDirection: 'column',
+								padding: '1rem 1rem 0.5rem !important',
+								height: '100%',
+								boxSizing: 'border-box',
+							}}
+						>
 							<Stack spacing={2}>
 								<Typography
 									variant='h5'
 									sx={{
-										color: '#264c5d',
-										fontWeight: 'bold',
+										color: COLORS.titleColor,
+										fontWeight: '600',
 									}}
 								>
-									Quy trình làm việc
+									{secondTitle}
 								</Typography>
 								<Typography
 									variant='body2'
-									sx={{ lineHeight: '22px' }}
-								>
-									Một sản phẩm đẹp cần nhiều thời gian để thực hiện, và còn cần thêm hàng chục những bàn tay nhân sự
-									tham gia vào quá trình xây dựng và phát triển, hãy cùng tìm hiểu nhé
-								</Typography>
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'center',
-										marginTop: '38px',
+									sx={{
+										mt: '0.25rem !important',
+										color: COLORS.textColor,
+										textOverflow: 'ellipsis',
+										display: '-webkit-box',
+										'-webkit-line-clamp': '6',
+										'-webkit-box-orient': 'vertical',
+										overflow: 'hidden',
 									}}
 								>
-									<CrimsonButton
-										content='XEM THÊM'
-										onClick={() => {
-											console.log('abc');
-										}}
-										type={'crimson'}
-									></CrimsonButton>
-								</div>
+									{secondDescription}
+								</Typography>
 							</Stack>
+							<Box
+								sx={{
+									display: 'flex',
+									justifyContent: 'center',
+								}}
+							>
+								{isUsingOriginalButton ? (
+									<LoadMoreButton
+										isTransparentFirst={true}
+										content={secondBtnText}
+										onClick={secondBtnAction}
+									/>
+								) : (
+									<CrimsonButton
+										content={secondBtnText}
+										onClick={secondBtnAction}
+										type='crimson'
+									/>
+								)}
+							</Box>
 						</CardContent>
 					</Card>
 				</Grid>
@@ -122,3 +199,20 @@ export default function IntroduceBanner() {
 		</Container>
 	);
 }
+
+IntroduceBanner.propTypes = {
+	isUsingOriginalButton: PropTypes.bool,
+	imageUrl: PropTypes.string,
+	firstTitle: PropTypes.string,
+	firstDescription: PropTypes.string,
+	secondTitle: PropTypes.string,
+	secondDescription: PropTypes.string,
+	firstBtnText: PropTypes.string,
+	secondBtnText: PropTypes.string,
+	firstBtnAction: PropTypes.func,
+	secondBtnAction: PropTypes.func,
+};
+
+IntroduceBanner.defaultProps = {
+	isUsingOriginalButton: false,
+};

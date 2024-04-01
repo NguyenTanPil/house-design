@@ -18,7 +18,8 @@ const Collection = () => {
 			<Splide
 				extensions={{ Grid }}
 				options={{
-					type: 'slide',
+					rewind: true,
+					type: 'loop',
 					autoplay: true,
 					start: 1,
 					pagination: true,

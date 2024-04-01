@@ -1,5 +1,15 @@
+import BalconyIcon from '@mui/icons-material/Balcony';
+import BathtubIcon from '@mui/icons-material/Bathtub';
+import BedIcon from '@mui/icons-material/Bed';
+import ChairIcon from '@mui/icons-material/Chair';
+import ChildCareIcon from '@mui/icons-material/ChildCare';
+import CottageIcon from '@mui/icons-material/Cottage';
+import CountertopsIcon from '@mui/icons-material/Countertops';
+import DevicesIcon from '@mui/icons-material/Devices';
+import ForestIcon from '@mui/icons-material/Forest';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import TvIcon from '@mui/icons-material/Tv';
 import { Button, Container, Drawer, MenuItem, useScrollTrigger } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -57,6 +67,51 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
+const categories = [
+	{
+		text: 'Mẫu nhà đẹp',
+		Icon: CottageIcon,
+		isActive: true,
+	},
+	{
+		text: 'Cảnh quan',
+		Icon: ForestIcon,
+		isActive: false,
+	},
+	{
+		text: 'Phòng khách',
+		Icon: ChairIcon,
+	},
+	{
+		text: 'Phòng bếp',
+		Icon: CountertopsIcon,
+	},
+	{
+		text: 'Phòng ngủ',
+		Icon: BedIcon,
+	},
+	{
+		text: 'Trẻ em',
+		Icon: ChildCareIcon,
+	},
+	{
+		text: 'Ban Công',
+		Icon: BalconyIcon,
+	},
+	{
+		text: 'Rest Room',
+		Icon: BathtubIcon,
+	},
+	{
+		text: 'Làm việc',
+		Icon: DevicesIcon,
+	},
+	{
+		text: 'Giải trí',
+		Icon: TvIcon,
+	},
+];
+
 const Header = () => {
 	const [open, setOpen] = useState(false);
 
@@ -111,143 +166,65 @@ const Header = () => {
 								</Link>
 							</Box>
 
-							<Box sx={{ ml: '1rem', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-								<MenuItem
-									onClick={() => scrollToSection('features')}
-									sx={{
-										py: '6px',
-										px: '12px',
-										textTransform: 'uppercase',
-										'&:hover': {
-											backgroundColor: 'transparent',
-										},
-									}}
-								>
-									<Typography
-										variant='body2'
-										color='text.primary'
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-									>
-										Features
-									</Typography>
-								</MenuItem>
-								<MenuItem
-									onClick={() => scrollToSection('testimonials')}
-									sx={{
-										py: '6px',
-										px: '12px',
-										textTransform: 'uppercase',
-										'&:hover': {
-											backgroundColor: 'transparent',
-											color: COLORS.selectedColor,
-										},
-									}}
-								>
-									<Typography
-										variant='body2'
-										color='text.primary'
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-									>
-										Testimonials
-									</Typography>
-								</MenuItem>
-								<MenuItem
-									onClick={() => scrollToSection('highlights')}
-									sx={{
-										py: '6px',
-										px: '12px',
-										textTransform: 'uppercase',
-										'&:hover': {
-											backgroundColor: 'transparent',
-											color: COLORS.selectedColor,
-										},
-									}}
-								>
-									<Typography
-										variant='body2'
-										color='text.primary'
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-									>
-										Highlights
-									</Typography>
-								</MenuItem>
-								<MenuItem
-									onClick={() => scrollToSection('pricing')}
-									sx={{
-										py: '6px',
-										px: '12px',
-										textTransform: 'uppercase',
-										'&:hover': {
-											backgroundColor: 'transparent',
-											color: COLORS.selectedColor,
-										},
-									}}
-								>
-									<Typography
-										variant='body2'
-										color='text.primary'
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-									>
-										Pricing
-									</Typography>
-								</MenuItem>
-								<MenuItem
-									onClick={() => scrollToSection('faq')}
-									sx={{
-										py: '6px',
-										px: '12px',
-										textTransform: 'uppercase',
-										'&:hover': {
-											backgroundColor: 'transparent',
-											color: COLORS.selectedColor,
-										},
-									}}
-								>
-									<Typography
-										variant='body2'
-										color='text.primary'
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-									>
-										FAQ
-									</Typography>
-								</MenuItem>
+							<Box>
+								<Search>
+									<SearchIconWrapper>
+										<SearchIcon />
+									</SearchIconWrapper>
+									<StyledInputBase
+										placeholder='Search…'
+										inputProps={{ 'aria-label': 'search' }}
+									/>
+								</Search>
 							</Box>
 						</Box>
-						<Box>
-							<Search>
-								<SearchIconWrapper>
-									<SearchIcon />
-								</SearchIconWrapper>
-								<StyledInputBase
-									placeholder='Search…'
-									inputProps={{ 'aria-label': 'search' }}
-								/>
-							</Search>
+						<Box
+							sx={{
+								display: 'flex',
+								justifyContent: 'center',
+								marginRight: '-0.675rem',
+							}}
+						>
+							{categories.map(({ text, isActive, Icon }, idx) => (
+								<Box
+									key={idx}
+									sx={{
+										cursor: 'pointer',
+										backgroundColor: COLORS.backgroundColor,
+										borderColor: isActive ? COLORS.selectedColor : COLORS.borderColor,
+										color: isActive ? COLORS.selectedColor : COLORS.textColor,
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'center',
+										flexDirection: 'column',
+										paddingX: '0.25rem',
+										'&:hover': {
+											transition: '0.3s ease-in-out',
+											color: COLORS.selectedColor,
+										},
+									}}
+									onClick={() => {}}
+								>
+									<Box
+										sx={{
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'center',
+											mb: '0.125rem',
+										}}
+									>
+										<Icon sx={{ fontSize: '2rem' }} />
+									</Box>
+									<Typography
+										sx={{
+											textTransform: 'uppercase',
+											fontSize: '0.6rem',
+										}}
+									>
+										{text}
+									</Typography>
+								</Box>
+							))}
 						</Box>
 						<Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, justifyContent: 'end' }}>
 							<Button

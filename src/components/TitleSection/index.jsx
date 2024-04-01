@@ -8,7 +8,11 @@ const TitleSection = ({ title, subTitle }) => {
 			<Divider
 				sx={{
 					borderBottomWidth: '0.175rem',
-					width: '16rem',
+					width: {
+						xs: '8rem',
+						sm: '12rem',
+						md: '16rem',
+					},
 				}}
 			/>
 			<Box
@@ -44,7 +48,11 @@ const TitleSection = ({ title, subTitle }) => {
 			<Divider
 				sx={{
 					borderBottomWidth: '0.175rem',
-					width: '16rem',
+					width: {
+						xs: '8rem',
+						sm: '12rem',
+						md: '16rem',
+					},
 				}}
 			/>
 		</Box>
@@ -57,8 +65,8 @@ TitleSection.propTypes = {
 };
 
 TitleSection.defaultProps = {
-	items: [],
-	perPage: 3,
+	title: '',
+	subTitle: '',
 };
 
 export default TitleSection;
