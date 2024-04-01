@@ -75,6 +75,7 @@ export default function MasonryImageList(props) {
                                 alt={item.title}
                                 loading="lazy"
                                 data-fancybox="gallery"
+                                style={{borderRadius: '18px'}}
                             />
                         </ImageListItem>
                     ))}

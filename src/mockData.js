@@ -285,3 +285,133 @@ export const galleryDataSource = {
 
     ]
 };
+
+export const introduceTeam = [
+    {
+        title: "Founder & CEO",
+    },
+    {
+        img: " https://decoxdesign.com/upload/banner/ceo-a-hung.png",
+    },
+    {
+        title: "Accounting & HR",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/acounting-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/acounting-2.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/acounting-3.png",
+    },
+    {
+        title: "Project Manager",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-3.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-4.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-5.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-6.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/project-7.png",
+    },
+    {
+        title: "Architect",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-2.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-3.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-4.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-5.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-6.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-7.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-8.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-9.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-10.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-11.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-12.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/architect-13.png",
+    },
+    {
+        title: "2D Artist",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/2d-artist-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/2d-artist-2.png",
+    },
+    {
+        title: "Business Development",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/business-development-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/business-development-2.png",
+    },
+    {
+        title: "Marketing & PR",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/marketing-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/marketing-2.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/marketing-3.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/marketing-4.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/marketing-5.png",
+    },
+    {
+        title: "Quantity Surveyor",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/quantity-surveyor-1.png",
+    },
+    {
+        img: "https://decoxdesign.com/upload/banner/quantity-surveyor-2.png",
+    },
+   
+]

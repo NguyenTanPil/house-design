@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet, ScrollRestoration, useNavigate } from 'react-router-dom';
 import Footer from '../Footer';
 import Header from '../Header';
 import IntroduceBanner from '../IntroduceBanner';
@@ -13,6 +13,8 @@ const theme = createMuiTheme({
 });
 
 const RootApp = () => {
+	const navigate = useNavigate();
+
 	return (
 		<ThemeProvider theme={theme}>
 			<RootAppContainer>
@@ -29,7 +31,9 @@ const RootApp = () => {
 					secondDescription='Một sản phẩm đẹp cần nhiều thời gian để thực hiện, và còn cần thêm hàng chục những bàn tay nhân sự tham gia vào quá trình xây dựng và phát triển, hãy cùng tìm hiểu nhé'
 					firstBtnText='Xem thêm'
 					secondBtnText='Xem thêm'
-					firstBtnAction={() => {}}
+					firstBtnAction={() => {
+						navigate('./introduce');
+					}}
 					secondBtnAction={() => {}}
 				/>
 				<Footer />
