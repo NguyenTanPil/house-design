@@ -6,12 +6,17 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import CrimsonButton from './CustomButton';
 import { Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function IntroduceBanner() {
+
+	const navigate = useNavigate();
 	return (
-		<Container
+		<div>
+			<Container
 			sx={{
 				mt: 5,
+				display : 'flex'
 			}}
 		>
 			<Grid
@@ -64,7 +69,7 @@ export default function IntroduceBanner() {
 									<CrimsonButton
 										content='XEM NGAY'
 										onClick={() => {
-											console.log('abc');
+											navigate('./introduce');
 										}}
 										type={'midnightBlue'}
 									></CrimsonButton>
@@ -120,5 +125,6 @@ export default function IntroduceBanner() {
 				</Grid>
 			</Grid>
 		</Container>
+		</div>
 	);
 }
