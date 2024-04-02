@@ -89,11 +89,10 @@ const Details = () => {
 							<Grid
 								item
 								xs={12}
-								md={8}
 							>
 								<ImageListItem
 									sx={{
-										height: '100% !important',
+										height: '38rem !important',
 									}}
 								>
 									<img
@@ -105,7 +104,6 @@ const Details = () => {
 							<Grid
 								item
 								xs={12}
-								md={4}
 							>
 								<Box
 									sx={{
@@ -114,48 +112,44 @@ const Details = () => {
 										height: '100%',
 									}}
 								>
-									<Box
-										sx={{
-											border: `1px solid ${COLORS.borderColor}`,
-											padding: '1.6rem 2rem 1.2rem',
-										}}
-									>
+									<Box sx={{ mb: '2rem', mt: '1rem' }}>
 										<Typography
 											variant='h5'
 											sx={{
 												fontSize: '1.25rem',
-												mb: '0.875rem',
+												mb: '0.75rem',
+												textTransform: 'uppercase',
 											}}
 										>
-											Project Information
+											Thông tin dự án
 										</Typography>
 										<List
-											sx={{ padding: 0, width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+											sx={{ padding: 0, width: '100%', bgcolor: 'background.paper' }}
 											aria-label='contacts'
 										>
 											<ListItem disablePadding>
-												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Name</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '6.875rem' }}>Name</ListItemIcon>
 												<ListItemText
 													primary='Centenial house'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Area</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '6.875rem' }}>Diện tích</ListItemIcon>
 												<ListItemText
 													primary='400m2'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Style</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '6.875rem' }}>Phong cách</ListItemIcon>
 												<ListItemText
 													primary='Indochine'
 													sx={{ mb: 0 }}
 												/>
 											</ListItem>
 											<ListItem disablePadding>
-												<ListItemIcon sx={{ minWidth: '3.875rem' }}>Design</ListItemIcon>
+												<ListItemIcon sx={{ minWidth: '6.875rem' }}>Design</ListItemIcon>
 												<ListItemText
 													primary='Decox'
 													sx={{ mb: 0 }}
@@ -163,22 +157,16 @@ const Details = () => {
 											</ListItem>
 										</List>
 									</Box>
-									<Box
-										sx={{
-											border: `1px solid ${COLORS.borderColor}`,
-											padding: '1.6rem 2rem 1.2rem',
-											mt: '1rem',
-											flexGrow: 1,
-										}}
-									>
+									<Box>
 										<Typography
 											variant='h5'
 											sx={{
 												fontSize: '1.25rem',
-												mb: '0.875rem',
+												mb: '0.75rem',
+												textTransform: 'uppercase',
 											}}
 										>
-											Design Style
+											Phong cách thiết kế
 										</Typography>
 										<Typography
 											variant='body1'

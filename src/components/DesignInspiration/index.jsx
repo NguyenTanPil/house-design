@@ -9,7 +9,7 @@ const DesignInspiration = () => {
 
 	return (
 		<Container sx={{ mt: 8 }}>
-			<TitleSection title='Design Inspiration' />
+			<TitleSection title='Cảm hứng thiết kế' />
 			<ImageList
 				sx={{
 					gridTemplateColumns: {
