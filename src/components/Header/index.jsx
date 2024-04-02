@@ -23,6 +23,7 @@ import logo from '../../assets/images/logo.png';
 import { COLORS } from '../../constants';
 import { NestedDropdown } from 'mui-nested-menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { useNavigate } from 'react-router-dom/dist';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -230,6 +231,7 @@ const menuItemsData = {
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
+	const navigate = useNavigate();
 
 	const toggleDrawer = (newOpen) => () => {
 		setOpen(newOpen);
@@ -240,13 +242,14 @@ const Header = () => {
 	});
 
 	return (
-		<Box sx={{ flexGrow: 1, mt: '80px' }}>
+		<Box sx={{ flexGrow: 1, mt: '5rem' }}>
 			<AppBar
 				position='fixed'
 				sx={{
 					paddingY: 1,
 					bgcolor: COLORS.backgroundColor,
 					backgroundImage: 'none',
+					zIndex: 9,
 					boxShadow: trigger
 						? '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)'
 						: 'none',
@@ -346,13 +349,13 @@ const Header = () => {
 										alignItems: 'center',
 										justifyContent: 'center',
 										flexDirection: 'column',
-										paddingX: '0.25rem',
+										paddingX: '0.35rem',
 										'&:hover': {
 											transition: '0.3s ease-in-out',
 											color: COLORS.selectedColor,
 										},
 									}}
-									onClick={() => {}}
+									onClick={() => navigate('/mau-nha-dep')}
 								>
 									<Box
 										sx={{
@@ -383,7 +386,7 @@ const Header = () => {
 								onClick={toggleDrawer(true)}
 								sx={{ minWidth: '30px', p: '4px', outline: 'none !important' }}
 							>
-								<MenuIcon sx={{ color: COLORS.selectedColor }} />
+								<MenuIcon sx={{ color: COLORS.selectedColor, fontSize: '2rem' }} />
 							</Button>
 							<Drawer
 								anchor='right'
@@ -414,7 +417,7 @@ const Header = () => {
 													color: COLORS.selectedColor,
 												},
 											}}
-											onClick={() => {}}
+											onClick={() => navigate('/mau-nha-dep')}
 										>
 											<Box
 												sx={{

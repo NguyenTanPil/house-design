@@ -1,6 +1,5 @@
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import CategoriesFilter from '../../components/CategoriesFilter';
 import MasonryImageList from '../../components/GalleryImage';
 import { COLORS } from '../../constants';
 import { galleryDataSource } from '../../mockData';
@@ -24,19 +23,16 @@ export default function MainPageCategory() {
 		}
 	};
 	return (
-		<>
-			<CategoriesFilter />
+		<Box sx={{ mt: 6 }}>
 			<MasonryImageList data={galleryDataSource?.[`${getCategory()}`]} />
-			<Container>
-				<Box
-					sx={{
-						borderBottom: `1px dashed ${COLORS.borderColor}`,
-						height: '2px',
-						width: '100%',
-						margin: '44px 0px 20px 0',
-					}}
-				/>
-			</Container>
-		</>
+			<Box
+				sx={{
+					borderBottom: `1px dashed ${COLORS.borderColor}`,
+					height: '2px',
+					width: '100%',
+					margin: '44px 0px 20px 0',
+				}}
+			/>
+		</Box>
 	);
 }
