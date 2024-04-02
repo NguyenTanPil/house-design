@@ -21,10 +21,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import { COLORS } from '../../constants';
+import { NestedDropdown } from 'mui-nested-menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
-	borderRadius: theme.shape.borderRadius,
+	borderRadius: 0,
 	backgroundColor: 'transparent',
 	'&:focus-within': {
 		borderColor: COLORS.selectedColor,
@@ -112,6 +114,120 @@ const categories = [
 	},
 ];
 
+const menuItemStyle = {
+	padding: '0.5rem 1.5rem',
+
+	'&:hover': {
+		color: COLORS.selectedColor,
+	},
+};
+
+const menuItemsData = {
+	label: 'Menu',
+	leftIcon: <MenuOpenIcon />,
+	items: [
+		{
+			label: 'Giới thiệu',
+			callback: (event, item) => console.log('New clicked', event, item),
+		},
+		{
+			label: 'Thiết kế nội thất',
+			items: [
+				{
+					label: 'Vila, Biệt thự',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Khách sạn',
+					sx: menuItemStyle,
+					items: [
+						{
+							label: 'Nội thất khách sạn',
+							sx: menuItemStyle,
+						},
+						{
+							label: 'Căn hộ dịch vụ',
+							sx: menuItemStyle,
+						},
+					],
+				},
+				{
+					label: 'Nhà khách',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Chung cư',
+					sx: menuItemStyle,
+				},
+			],
+		},
+		{
+			label: 'Thiết kế kiến trúc',
+			items: [
+				{
+					label: 'Khách sạn',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Biệt thự',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Nhà phố',
+					sx: menuItemStyle,
+				},
+			],
+		},
+		{
+			label: 'Thiết kế cảnh quan',
+			items: [
+				{
+					label: 'Vườn đọc sách',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Vườn Việt Nam',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Vườn nhiệt đới',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Vườn Nhật Bản',
+					sx: menuItemStyle,
+				},
+			],
+		},
+		{
+			label: 'Công trình thực tế',
+		},
+		{
+			label: 'Phát triển dự án',
+		},
+		{
+			label: 'Quản lý dự án',
+		},
+		{
+			label: 'Báo giá',
+			items: [
+				{
+					label: 'Báo giá thiết kế nội thất',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Báo giá thi công nội thất',
+					sx: menuItemStyle,
+				},
+				{
+					label: 'Báo giá xây dựng nhà phố',
+					sx: menuItemStyle,
+				},
+			],
+		},
+	],
+};
+
 const Header = () => {
 	const [open, setOpen] = useState(false);
 
@@ -122,8 +238,6 @@ const Header = () => {
 	const trigger = useScrollTrigger({
 		threshold: 0,
 	});
-
-	const scrollToSection = () => {};
 
 	return (
 		<Box sx={{ flexGrow: 1, mt: '80px' }}>
@@ -165,7 +279,42 @@ const Header = () => {
 									/>
 								</Link>
 							</Box>
+							<Box
+								sx={{
+									ml: '2rem',
+								}}
+							>
+								<NestedDropdown
+									menuItemsData={menuItemsData}
+									MenuProps={{
+										sx: {
+											'.MuiMenuItem-root': {
+												padding: '0.5rem 1.5rem',
 
+												'&:hover': {
+													color: COLORS.selectedColor,
+												},
+											},
+										},
+									}}
+									ButtonProps={{
+										sx: {
+											outline: 'none !important',
+											color: COLORS.textColor,
+											border: `1px solid ${COLORS.borderColor}`,
+											backgroundColor: COLORS.backgroundColor,
+											borderRadius: 0,
+
+											'&:hover': {
+												backgroundColor: COLORS.backgroundColor,
+												color: COLORS.selectedColor,
+												border: `1px solid ${COLORS.selectedColor}`,
+											},
+										},
+									}}
+									onClick={() => console.log('Clicked')}
+								/>
+							</Box>
 							<Box>
 								<Search>
 									<SearchIconWrapper>
@@ -180,9 +329,9 @@ const Header = () => {
 						</Box>
 						<Box
 							sx={{
-								display: 'flex',
 								justifyContent: 'center',
 								marginRight: '-0.675rem',
+								display: { xs: 'none', md: 'flex' },
 							}}
 						>
 							{categories.map(({ text, isActive, Icon }, idx) => (
@@ -232,7 +381,7 @@ const Header = () => {
 								color='primary'
 								aria-label='menu'
 								onClick={toggleDrawer(true)}
-								sx={{ minWidth: '30px', p: '4px' }}
+								sx={{ minWidth: '30px', p: '4px', outline: 'none !important' }}
 							>
 								<MenuIcon sx={{ color: COLORS.selectedColor }} />
 							</Button>
@@ -243,75 +392,52 @@ const Header = () => {
 							>
 								<Box
 									sx={{
-										minWidth: '60dvw',
-										p: 2,
+										minWidth: '40dvw',
+										padding: '1rem 0',
 										backgroundColor: 'background.paper',
 										flexGrow: 1,
 									}}
 								>
-									<Box
-										sx={{
-											display: 'flex',
-											flexDirection: 'column',
-											alignItems: 'end',
-											flexGrow: 1,
-										}}
-									></Box>
-									<MenuItem
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-										onClick={() => scrollToSection('features')}
-									>
-										Features
-									</MenuItem>
-									<MenuItem
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-										onClick={() => scrollToSection('testimonials')}
-									>
-										Testimonials
-									</MenuItem>
-									<MenuItem
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-										onClick={() => scrollToSection('highlights')}
-									>
-										Highlights
-									</MenuItem>
-									<MenuItem
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-										onClick={() => scrollToSection('pricing')}
-									>
-										Pricing
-									</MenuItem>
-									<MenuItem
-										sx={{
-											'&:hover': {
-												color: COLORS.selectedColor,
-												transition: '0.3s ease-in-out',
-											},
-										}}
-										onClick={() => scrollToSection('faq')}
-									>
-										FAQ
-									</MenuItem>
+									{categories.map(({ text, isActive, Icon }, idx) => (
+										<MenuItem
+											key={idx}
+											sx={{
+												cursor: 'pointer',
+												backgroundColor: COLORS.backgroundColor,
+												borderColor: isActive ? COLORS.selectedColor : COLORS.borderColor,
+												color: isActive ? COLORS.selectedColor : COLORS.textColor,
+												display: 'flex',
+												alignItems: 'center',
+												paddingX: '2rem',
+												'&:hover': {
+													transition: '0.3s ease-in-out',
+													color: COLORS.selectedColor,
+												},
+											}}
+											onClick={() => {}}
+										>
+											<Box
+												sx={{
+													display: 'flex',
+													alignItems: 'center',
+													justifyContent: 'center',
+													mb: '0.125rem',
+												}}
+											>
+												<Icon sx={{ fontSize: '1.75rem' }} />
+											</Box>
+											<Typography
+												sx={{
+													textTransform: 'uppercase',
+													fontSize: '1rem',
+													ml: '1rem',
+													lineHeight: '1rem',
+												}}
+											>
+												{text}
+											</Typography>
+										</MenuItem>
+									))}
 								</Box>
 							</Drawer>
 						</Box>
