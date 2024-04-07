@@ -1,10 +1,17 @@
 import { Container } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { BORDER_RADIUS } from '../../constants';
 
 const Slider = () => {
 	return (
-		<Container>
+		<Container
+			sx={{
+				'.splide__track': {
+					borderRadius: BORDER_RADIUS.image,
+				},
+			}}
+		>
 			<Splide
 				options={{ rewind: false, type: 'loop', autoplay: true, width: '100%', fixedHeight: '600px' }}
 				aria-label='React Splide Example'

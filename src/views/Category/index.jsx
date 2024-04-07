@@ -1,5 +1,4 @@
 import { Container } from '@mui/material';
-import Breadcrumb from '../../components/Breadcrumbs/index';
 import MainPageCategory from './MainPageCategory';
 
 export default function Category() {
@@ -12,7 +11,6 @@ export default function Category() {
 				alignItems: 'center',
 			}}
 		>
-			<Breadcrumb />
 			<MainPageCategory />
 		</Container>
 	);

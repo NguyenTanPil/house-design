@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Container, ImageListItem, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 import { banner } from '../../dummy';
 
 const Banner = () => {
@@ -12,6 +12,7 @@ const Banner = () => {
 					background: 'url(https://decoxdesign.com/images/green-bg.jpg) no-repeat',
 					backgroundSize: 'cover',
 					position: 'relative',
+					borderRadius: BORDER_RADIUS.card,
 				}}
 			>
 				<Box
@@ -32,7 +33,7 @@ const Banner = () => {
 							start: 0,
 							perPage: 3,
 							pagination: false,
-							gap: 16,
+							gap: 8,
 							focus: 'center',
 							arrows: false,
 							autoScroll: {
@@ -50,12 +51,12 @@ const Banner = () => {
 								<ImageListItem>
 									<Card
 										sx={{
-											borderRadius: '0',
+											borderRadius: BORDER_RADIUS.image,
 											boxShadow: 'none',
 										}}
 									>
 										<CardMedia
-											sx={{ height: 180 }}
+											sx={{ height: 180, borderRadius: BORDER_RADIUS.image }}
 											image={item.imgUrl}
 										/>
 										<CardContent>

@@ -1,6 +1,6 @@
 import { Container, ImageList, ImageListItem, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 import { designByAi } from '../../dummy';
 import TitleSection from '../TitleSection';
 
@@ -25,6 +25,9 @@ const DesignByAi = () => {
 						key={item.id}
 						sx={{
 							cursor: 'pointer',
+							img: {
+								borderRadius: BORDER_RADIUS.image,
+							},
 						}}
 						onClick={() => navigate(`/details/${item.title}`)}
 					>

@@ -5,6 +5,7 @@ import Popular from '../views/Popular';
 import Details from '../views/Details';
 import Category from '../views/Category';
 import IntroduceCompany from '../components/IntroduceCompany';
+import Quote from '../views/Quote';
 
 const Routers = () => {
 	const router = createBrowserRouter([
@@ -30,7 +31,11 @@ const Routers = () => {
 				},
 				{
 					path: '/introduce',
-					element: <IntroduceCompany/>,
+					element: <IntroduceCompany />,
+				},
+				{
+					path: '/quote',
+					element: <Quote />,
 				},
 			],
 		},

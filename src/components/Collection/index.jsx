@@ -1,6 +1,6 @@
 import { Box, Container, ImageListItem, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 import { collection } from '../../dummy';
 import { useNavigate } from 'react-router-dom';
 import { Grid } from '@splidejs/splide-extension-grid';
@@ -10,7 +10,14 @@ const Collection = () => {
 	const navigate = useNavigate();
 
 	return (
-		<Container sx={{ mt: 8 }}>
+		<Container
+			sx={{
+				mt: 8,
+				img: {
+					borderRadius: BORDER_RADIUS.image,
+				},
+			}}
+		>
 			<TitleSection
 				title='DECOX SIGNATURE'
 				subTitle='Collection'

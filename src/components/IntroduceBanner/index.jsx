@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import CrimsonButton from './CustomButton';
 import { Box, Container } from '@mui/material';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS, FONT_SIZE } from '../../constants';
 import PropTypes from 'prop-types';
 import LoadMoreButton from '../LoadMoreButton';
 
@@ -46,7 +46,7 @@ export default function IntroduceBanner({
 							},
 						}}
 					>
-						<Card sx={{ borderRadius: '0' }}>
+						<Card sx={{ borderRadius: BORDER_RADIUS.image }}>
 							<CardMedia
 								sx={{ height: 245 }}
 								image={imageUrl}
@@ -61,7 +61,7 @@ export default function IntroduceBanner({
 					>
 						<Card
 							sx={{
-								borderRadius: '0',
+								borderRadius: BORDER_RADIUS.card,
 								maxHeight: 245,
 								boxShadow: 'none',
 								border: `1px solid ${COLORS.borderColor}`,
@@ -84,6 +84,7 @@ export default function IntroduceBanner({
 										sx={{
 											color: COLORS.titleColor,
 											fontWeight: '600',
+											fontSize: FONT_SIZE.sectionTitle,
 										}}
 									>
 										{firstTitle}
@@ -91,11 +92,12 @@ export default function IntroduceBanner({
 									<Typography
 										variant='body2'
 										sx={{
-											mt: '0.25rem !important',
+											fontSize: FONT_SIZE.text,
+											mt: '0.5rem !important',
 											color: COLORS.textColor,
 											textOverflow: 'ellipsis',
 											display: '-webkit-box',
-											'-webkit-line-clamp': '6',
+											'-webkit-line-clamp': '5',
 											'-webkit-box-orient': 'vertical',
 											overflow: 'hidden',
 										}}
@@ -112,6 +114,7 @@ export default function IntroduceBanner({
 									{isUsingOriginalButton ? (
 										<LoadMoreButton
 											isTransparentFirst={true}
+											isSmall={true}
 											content={firstBtnText}
 											onClick={firstBtnAction}
 										/>
@@ -132,7 +135,7 @@ export default function IntroduceBanner({
 					>
 						<Card
 							sx={{
-								borderRadius: '0',
+								borderRadius: BORDER_RADIUS.card,
 								maxHeight: 245,
 								boxShadow: 'none',
 								border: `1px solid ${COLORS.borderColor}`,
@@ -155,6 +158,7 @@ export default function IntroduceBanner({
 										sx={{
 											color: COLORS.titleColor,
 											fontWeight: '600',
+											fontSize: FONT_SIZE.sectionTitle,
 										}}
 									>
 										{secondTitle}
@@ -162,11 +166,12 @@ export default function IntroduceBanner({
 									<Typography
 										variant='body2'
 										sx={{
-											mt: '0.25rem !important',
+											fontSize: FONT_SIZE.text,
+											mt: '0.5rem !important',
 											color: COLORS.textColor,
 											textOverflow: 'ellipsis',
 											display: '-webkit-box',
-											'-webkit-line-clamp': '6',
+											'-webkit-line-clamp': '5',
 											'-webkit-box-orient': 'vertical',
 											overflow: 'hidden',
 										}}
@@ -183,6 +188,7 @@ export default function IntroduceBanner({
 									{isUsingOriginalButton ? (
 										<LoadMoreButton
 											isTransparentFirst={true}
+											isSmall={true}
 											content={secondBtnText}
 											onClick={secondBtnAction}
 										/>

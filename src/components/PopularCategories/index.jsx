@@ -1,14 +1,21 @@
 import { Card, CardContent, CardMedia, Container, Grid, ImageListItem, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import PropTypes from 'prop-types';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 import { useNavigate } from 'react-router-dom';
 
 const PopularCategories = ({ items, titleUrl, title, subTitle, perPage, imageHeight }) => {
 	const navigate = useNavigate();
 
 	return (
-		<Container sx={{ mt: 4 }}>
+		<Container
+			sx={{
+				mt: 4,
+				img: {
+					borderRadius: BORDER_RADIUS.image,
+				},
+			}}
+		>
 			<Grid
 				container
 				spacing={2}
@@ -86,7 +93,7 @@ const PopularCategories = ({ items, titleUrl, title, subTitle, perPage, imageHei
 										}}
 									>
 										<CardMedia
-											sx={{ height: imageHeight }}
+											sx={{ height: imageHeight, borderRadius: BORDER_RADIUS.image }}
 											image={item.imgUrl}
 										/>
 										<CardContent sx={{ pl: 0, pb: '0.5rem !important' }}>

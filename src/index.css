@@ -30,7 +30,7 @@ body {
 }
 
 .MuiPopover-paper {
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 }
 
 a {

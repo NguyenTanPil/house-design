@@ -1,6 +1,6 @@
 import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 import { Box, Container, Grid, ImageList, ImageListItem, Typography } from '@mui/material';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 
 const ShortChannel = () => {
 	return (
@@ -57,7 +57,13 @@ const ShortChannel = () => {
 				>
 					<ImageList cols={1}>
 						<ImageListItem>
-							<Box>
+							<Box
+								sx={{
+									iframe: {
+										borderRadius: BORDER_RADIUS.image,
+									},
+								}}
+							>
 								<iframe
 									width='100%'
 									height='553'
@@ -72,7 +78,11 @@ const ShortChannel = () => {
 						</ImageListItem>
 						<ImageListItem>
 							<ImageList
-								sx={{}}
+								sx={{
+									img: {
+										borderRadius: BORDER_RADIUS.image,
+									},
+								}}
 								cols={4}
 								gap={10}
 							>

@@ -1,10 +1,11 @@
-import { Outlet, ScrollRestoration, useNavigate } from 'react-router-dom';
+import { ThemeProvider, createMuiTheme } from '@mui/material';
+import { Outlet, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom';
+import Breadcrumb from '../Breadcrumbs';
 import Footer from '../Footer';
 import Header from '../Header';
 import IntroduceBanner from '../IntroduceBanner';
-import { RootAppContainer } from './RootAppStyles';
 import ScrollToTop from '../ScrollToTop';
-import { ThemeProvider, createMuiTheme } from '@mui/material';
+import { RootAppContainer } from './RootAppStyles';
 
 const theme = createMuiTheme({
 	typography: {
@@ -14,12 +15,15 @@ const theme = createMuiTheme({
 
 const RootApp = () => {
 	const navigate = useNavigate();
+	const { pathname } = useLocation();
+	console.log({ location });
 
 	return (
 		<ThemeProvider theme={theme}>
 			<RootAppContainer>
 				<ScrollRestoration />
 				<Header />
+				{pathname !== '/' && <Breadcrumb />}
 				<Outlet />
 				<IntroduceBanner
 					imageUrl='https://decoxdesign.com/upload/banner/landscape.jpg'
@@ -34,7 +38,9 @@ const RootApp = () => {
 					firstBtnAction={() => {
 						navigate('./introduce');
 					}}
-					secondBtnAction={() => {}}
+					secondBtnAction={() => {
+						navigate('./quote');
+					}}
 				/>
 				<Footer />
 				<ScrollToTop />

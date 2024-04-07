@@ -1,17 +1,17 @@
 import { Button } from '@mui/material';
 import PropTypes from 'prop-types';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 
-const LoadMoreButton = ({ isTransparentFirst, content, onClick }) => {
+const LoadMoreButton = ({ isTransparentFirst, isSmall, content, onClick }) => {
 	return (
 		<Button
 			sx={{
-				outline: 'none',
+				outline: 'none !important',
 				boxShadow: 'none',
 				color: isTransparentFirst ? COLORS.selectedColor : COLORS.backgroundColor,
 				backgroundColor: isTransparentFirst ? 'transparent' : COLORS.selectedColor,
-				padding: '0.75rem 2.5rem',
-				borderRadius: '0',
+				padding: isSmall ? '0.5rem 1.5rem' : '0.75rem 2.5rem',
+				borderRadius: isSmall ? BORDER_RADIUS.smallButton : BORDER_RADIUS.largeButton,
 				textTransform: 'uppercase',
 				border: `1px solid ${COLORS.selectedColor} !important`,
 				'&:hover': {
@@ -35,11 +35,13 @@ const LoadMoreButton = ({ isTransparentFirst, content, onClick }) => {
 LoadMoreButton.propTypes = {
 	isTransparentFirst: PropTypes.bool,
 	content: PropTypes.string,
+	isSmall: PropTypes.bool,
 	onClick: PropTypes.func,
 };
 
 LoadMoreButton.defaultProps = {
 	isTransparentFirst: false,
+	isSmall: false,
 };
 
 export default LoadMoreButton;

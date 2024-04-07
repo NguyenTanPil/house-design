@@ -12,7 +12,7 @@ import {
 	ListItemText,
 	Typography,
 } from '@mui/material';
-import { COLORS } from '../../constants';
+import { COLORS, FONT_SIZE } from '../../constants';
 import logo from '../../assets/images/logo_3.png';
 import { Link } from 'react-router-dom';
 
@@ -55,7 +55,7 @@ const Footer = () => {
 								</Box>
 								<Typography
 									variant='body1'
-									sx={{ color: COLORS.colorFooter }}
+									sx={{ color: COLORS.colorFooter, fontSize: FONT_SIZE.text }}
 								>
 									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
 									massa..
@@ -65,19 +65,40 @@ const Footer = () => {
 						<ImageListItem>
 							<Typography
 								variant='h6'
-								sx={{ fontWeight: '600', mb: '1rem', fontSize: '1rem', color: COLORS.backgroundColor }}
+								sx={{ fontWeight: '600', mb: '1rem', fontSize: FONT_SIZE.footerTitle, color: COLORS.backgroundColor }}
 							>
 								ADDRESS
 							</Typography>
 							<List sx={{ color: COLORS.colorFooter }}>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Hà Nội: Số 10, P. Miếu Đầm, Mễ Trì, Từ Liêm, Hà Nội' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Hà Nội: Số 10, P. Miếu Đầm, Mễ Trì, Từ Liêm, Hà Nội'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Nha Trang: Tầng 9, Số 1 đường Trần Hưng Đạo, Tp Nha Trang.' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Nha Trang: Tầng 9, Số 1 đường Trần Hưng Đạo, Tp Nha Trang.'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Đà Nẵng: 18 An Nhơn 3, An Hải Bắc, Sơn Trà, Đà Nẵng.' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Đà Nẵng: 18 An Nhơn 3, An Hải Bắc, Sơn Trà, Đà Nẵng.'
+									/>
 								</ListItem>
 							</List>
 						</ImageListItem>
@@ -91,19 +112,54 @@ const Footer = () => {
 							</Typography>
 							<List sx={{ color: COLORS.colorFooter }}>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Chính sách vận chuyển, giao nhận' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Chính sách vận chuyển, giao nhận'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Chính sách hỗ trợ, bảo hành' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Chính sách hỗ trợ, bảo hành'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Chính sách đổi/trả và hoàn tiền' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Chính sách đổi/trả và hoàn tiền'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Chính sách bảo mật thông tin' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Chính sách bảo mật thông tin'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Quy định về hình thức thanh toán' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Quy định về hình thức thanh toán'
+									/>
 								</ListItem>
 							</List>
 						</ImageListItem>
@@ -116,13 +172,34 @@ const Footer = () => {
 							</Typography>
 							<List sx={{ color: COLORS.colorFooter }}>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Công ty cổ phần Decox' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Công ty cổ phần Decox'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Hotline: 0901 411 489' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Hotline: 0901 411 489'
+									/>
 								</ListItem>
 								<ListItem sx={{ padding: 0, mb: '0.25rem' }}>
-									<ListItemText primary='Email: support@decox.vn' />
+									<ListItemText
+										sx={{
+											span: {
+												fontSize: FONT_SIZE.text,
+											},
+										}}
+										primary='Email: support@decox.vn'
+									/>
 								</ListItem>
 							</List>
 

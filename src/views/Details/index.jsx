@@ -9,19 +9,14 @@ import {
 	ListItemText,
 	Typography,
 } from '@mui/material';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Breadcrumb from '../../components/Breadcrumbs';
-import { COLORS } from '../../constants';
-import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
 import PopularCategories from '../../components/PopularCategories';
-import LoadMoreButton from '../../components/LoadMoreButton';
+import { BORDER_RADIUS, COLORS, FONT_SIZE } from '../../constants';
+import { interiorDesign, newArchitecture, tiktokStories } from '../../dummy';
 
 const Details = () => {
 	return (
 		<>
-			<Container sx={{ mt: 3 }}>
-				<Breadcrumb />
-
+			<Container sx={{ mt: 3, mb: 8 }}>
 				<Box sx={{ mt: '4rem' }}>
 					<Box
 						sx={{
@@ -34,6 +29,7 @@ const Details = () => {
 							sx={{
 								color: COLORS.textColor,
 								textTransform: 'uppercase',
+								fontSize: FONT_SIZE.description,
 							}}
 						>
 							Thiết kế nội thất
@@ -42,6 +38,7 @@ const Details = () => {
 							sx={{
 								color: COLORS.textColor,
 								textTransform: 'uppercase',
+								fontSize: FONT_SIZE.description,
 
 								'&:before': {
 									content: '"|"',
@@ -63,6 +60,7 @@ const Details = () => {
 							sx={{
 								color: COLORS.textColor,
 								textTransform: 'uppercase',
+								fontSize: FONT_SIZE.description,
 
 								'&:before': {
 									content: '"|"',
@@ -93,6 +91,9 @@ const Details = () => {
 								<ImageListItem
 									sx={{
 										height: '38rem !important',
+										img: {
+											borderRadius: BORDER_RADIUS.image,
+										},
 									}}
 								>
 									<img
@@ -116,7 +117,7 @@ const Details = () => {
 										<Typography
 											variant='h5'
 											sx={{
-												fontSize: '1.25rem',
+												fontSize: FONT_SIZE.sectionTitle,
 												mb: '0.75rem',
 												textTransform: 'uppercase',
 											}}
@@ -161,7 +162,7 @@ const Details = () => {
 										<Typography
 											variant='h5'
 											sx={{
-												fontSize: '1.25rem',
+												fontSize: FONT_SIZE.sectionTitle,
 												mb: '0.75rem',
 												textTransform: 'uppercase',
 											}}
@@ -170,7 +171,7 @@ const Details = () => {
 										</Typography>
 										<Typography
 											variant='body1'
-											sx={{ color: COLORS.textColor }}
+											sx={{ color: COLORS.textColor, fontSize: FONT_SIZE.description }}
 										>
 											Mộng Chiều Xuân là bản tango Xuân nổi tiếng hàng đầu trong làng Tân Nhạc Việt Nam trước 1975, do
 											nhạc sĩ Ngọc Bích viết. Với cảm hứng từ những câu từ tha thiết trong tác phẩm bất hủ ấy, KTS Decox
@@ -185,143 +186,145 @@ const Details = () => {
 						</Grid>
 					</Box>
 
-					<Box sx={{ mt: '2rem' }}>
+					<Box sx={{ mt: '2rem', img: { borderRadius: BORDER_RADIUS.image } }}>
 						<Typography
 							variant='h6'
 							sx={{
 								mb: 2,
 								textTransform: 'uppercase',
 								fontWeight: '500',
+								fontSize: FONT_SIZE.sectionTitle,
 							}}
 						>
-							Sảnh chờ
+							Kiến trúc
 						</Typography>
 						<Box>
-							<Splide
-								options={{
-									type: 'loop',
-									autoplay: true,
-									drag: 'free',
-									start: 0,
-									perPage: 3,
-									pagination: true,
-									gap: 6,
-									focus: 'center',
-									arrows: true,
-									autoScroll: {
-										speed: 2,
+							<Typography
+								variant='body1'
+								sx={{ color: COLORS.textColor, fontSize: FONT_SIZE.description }}
+							>
+								Xuyên suốt dòng chảy lịch sử, phong cách Indochine đã trải qua nhiều thay đổi về thiết kế lẫn công năng
+								để phù hợp với thị hiếu, xu hướng thị trường. Không còn nhuốm màu cổ kính như những thiết kế truyền
+								thống, kiến trúc Indochine thời nay là bản hòa tấu đầy sinh động của sắc màu, vật liệu hiện đại được
+								lồng ghép đầy khéo léo bên cạnh những chi tiết đặc trưng của kiến trúc Đông Dương.
+							</Typography>
+							<ImageListItem
+								sx={{
+									mt: 3,
+									height: '38rem !important',
+									img: {
+										borderRadius: BORDER_RADIUS.image,
 									},
 								}}
 							>
-								{interiorDesign.map((item) => (
-									<SplideSlide key={item.id}>
-										<ImageListItem>
-											<img
-												src={item.imgUrl}
-												alt=''
-												loading='lazy'
-											/>
-										</ImageListItem>
-									</SplideSlide>
-								))}
-							</Splide>
+								<img
+									src='https://decoxdesign.com/upload/images/mau-nha-dep-d9-villa-01-decox.jpg'
+									alt=''
+								/>
+							</ImageListItem>
+							<ImageListItem
+								sx={{
+									mt: 3,
+									height: '38rem !important',
+									img: {
+										borderRadius: BORDER_RADIUS.image,
+									},
+								}}
+							>
+								<img
+									src='https://decoxdesign.com/upload/images/mau-nha-dep-d9-villa-02-decox.jpg'
+									alt=''
+								/>
+							</ImageListItem>
 						</Box>
 					</Box>
-					<Box sx={{ mt: '2rem' }}>
+					<Box sx={{ mt: '2rem', img: { borderRadius: BORDER_RADIUS.image } }}>
 						<Typography
 							variant='h6'
 							sx={{
 								mb: 2,
 								textTransform: 'uppercase',
 								fontWeight: '500',
+								fontSize: FONT_SIZE.sectionTitle,
 							}}
 						>
 							Phòng khách
 						</Typography>
 						<Box>
-							<Splide
-								options={{
-									type: 'loop',
-									autoplay: true,
-									drag: 'free',
-									start: 0,
-									perPage: 3,
-									pagination: true,
-									gap: 6,
-									focus: 'center',
-									arrows: true,
-									autoScroll: {
-										speed: 2,
+							<Typography
+								variant='body1'
+								sx={{ color: COLORS.textColor, fontSize: FONT_SIZE.description }}
+							>
+								Phủ lên công trình là những tone màu trầm trung tính tạo nên nét hiện đại, hướng tới xu hướng tinh giản
+								của tương lai, Decox mời bạn cùng chiêm ngưỡng.
+							</Typography>
+							<ImageListItem
+								sx={{
+									mt: 3,
+									height: '38rem !important',
+									img: {
+										borderRadius: BORDER_RADIUS.image,
 									},
 								}}
 							>
-								{interiorDesign.map((item) => (
-									<SplideSlide key={item.id}>
-										<ImageListItem>
-											<img
-												src={item.imgUrl}
-												alt=''
-												loading='lazy'
-											/>
-										</ImageListItem>
-									</SplideSlide>
-								))}
-							</Splide>
+								<img
+									src='https://decoxdesign.com/upload/images/penthouse-massimo-217m2-phong-khach-20-decox.jpg'
+									alt=''
+								/>
+							</ImageListItem>
+							<ImageListItem
+								sx={{
+									mt: 3,
+									height: '38rem !important',
+									img: {
+										borderRadius: BORDER_RADIUS.image,
+									},
+								}}
+							>
+								<img
+									src='https://decoxdesign.com/upload/images/penthouse-massimo-217m2-phong-khach-10-decox.jpg'
+									alt=''
+								/>
+							</ImageListItem>
 						</Box>
 					</Box>
-					<Box sx={{ mt: '2rem' }}>
+					<Box sx={{ mt: '2rem', img: { borderRadius: BORDER_RADIUS.image } }}>
 						<Typography
 							variant='h6'
 							sx={{
 								mb: 2,
 								textTransform: 'uppercase',
 								fontWeight: '500',
+								fontSize: FONT_SIZE.sectionTitle,
 							}}
 						>
-							Phòng ăn
+							Phong cách thiết kế
 						</Typography>
 						<Box>
-							<Splide
-								options={{
-									type: 'loop',
-									autoplay: true,
-									drag: 'free',
-									start: 0,
-									perPage: 3,
-									pagination: true,
-									gap: 6,
-									focus: 'center',
-									arrows: true,
-									autoScroll: {
-										speed: 2,
+							<Typography
+								variant='body1'
+								sx={{ color: COLORS.textColor, fontSize: FONT_SIZE.description }}
+							>
+								Thiết kế chú trọng vào yếu tố ánh sáng để tôn lên vẻ đẹp cao cấp của chất liệu, nội thất sử dụng. Đồng
+								thời, ánh sáng còn tạo nhịp chuyển nhẹ nhàng giữa các không gian chức năng và mang lại cảm giác ấm cúng,
+								thoải mái, tăng sự kết nối giữa các thành viên trong gia đình.
+							</Typography>
+							<ImageListItem
+								sx={{
+									mt: 3,
+									height: '38rem !important',
+									img: {
+										borderRadius: BORDER_RADIUS.image,
 									},
 								}}
 							>
-								{interiorDesign.map((item) => (
-									<SplideSlide key={item.id}>
-										<ImageListItem>
-											<img
-												src={item.imgUrl}
-												alt=''
-												loading='lazy'
-											/>
-										</ImageListItem>
-									</SplideSlide>
-								))}
-							</Splide>
+								<img
+									src='https://decoxdesign.com/upload/images/mau-nha-dep-thi-cong-binh-tan-townhouse-02-decox.jpg'
+									alt=''
+								/>
+							</ImageListItem>
 						</Box>
 					</Box>
-				</Box>
-
-				<Box
-					sx={{
-						mt: '3.6rem',
-						mb: '3.6rem',
-						display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
-					<LoadMoreButton content='see more designs' />
 				</Box>
 			</Container>
 			<PopularCategories

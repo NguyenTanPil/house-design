@@ -20,14 +20,13 @@ import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS, FONT_SIZE } from '../../constants';
 import { NestedDropdown } from 'mui-nested-menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { useNavigate } from 'react-router-dom/dist';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
-	borderRadius: 0,
 	backgroundColor: 'transparent',
 	'&:focus-within': {
 		borderColor: COLORS.selectedColor,
@@ -35,6 +34,7 @@ const Search = styled('div')(({ theme }) => ({
 	marginLeft: 0,
 	width: '100%',
 	border: `1px solid ${COLORS.borderColor}`,
+	borderRadius: BORDER_RADIUS.input,
 
 	[theme.breakpoints.up('sm')]: {
 		marginLeft: theme.spacing(1),
@@ -117,6 +117,7 @@ const categories = [
 
 const menuItemStyle = {
 	padding: '0.5rem 1.5rem',
+	fontSize: FONT_SIZE.description,
 
 	'&:hover': {
 		color: COLORS.selectedColor,
@@ -306,7 +307,7 @@ const Header = () => {
 											color: COLORS.textColor,
 											border: `1px solid ${COLORS.borderColor}`,
 											backgroundColor: COLORS.backgroundColor,
-											borderRadius: 0,
+											borderRadius: BORDER_RADIUS.input,
 
 											'&:hover': {
 												backgroundColor: COLORS.backgroundColor,
@@ -324,7 +325,7 @@ const Header = () => {
 										<SearchIcon />
 									</SearchIconWrapper>
 									<StyledInputBase
-										placeholder='Search…'
+										placeholder='Nhập từ khóa...'
 										inputProps={{ 'aria-label': 'search' }}
 									/>
 								</Search>
@@ -370,7 +371,7 @@ const Header = () => {
 									<Typography
 										sx={{
 											textTransform: 'uppercase',
-											fontSize: '0.6rem',
+											fontSize: FONT_SIZE.categoryText,
 										}}
 									>
 										{text}
@@ -432,7 +433,7 @@ const Header = () => {
 											<Typography
 												sx={{
 													textTransform: 'uppercase',
-													fontSize: '1rem',
+													fontSize: FONT_SIZE.description,
 													ml: '1rem',
 													lineHeight: '1rem',
 												}}

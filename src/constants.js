@@ -11,3 +11,19 @@ export const COLORS = {
 	colorFooter: '#808083',
 	backgroundColorFooterIcon: '#363740',
 };
+
+export const BORDER_RADIUS = {
+	input: '0.25rem',
+	image: '0.5rem',
+	card: '0.5rem',
+	smallButton: '0.25rem',
+	largeButton: '0.5rem',
+};
+
+export const FONT_SIZE = {
+	text: '1rem',
+	sectionTitle: '1.25rem',
+	footerTitle: '1rem',
+	description: '1rem',
+	categoryText: '0.6rem',
+};

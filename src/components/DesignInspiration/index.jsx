@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Container, ImageList, ImageListItem, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { COLORS } from '../../constants';
+import { BORDER_RADIUS, COLORS } from '../../constants';
 import { designByAi } from '../../dummy';
 import TitleSection from '../TitleSection';
 
@@ -35,7 +35,7 @@ const DesignInspiration = () => {
 							}}
 						>
 							<CardMedia
-								sx={{ height: 180 }}
+								sx={{ height: 180, borderRadius: BORDER_RADIUS.image }}
 								image={item.imgUrl}
 							/>
 							<CardContent sx={{ pl: 0, pb: '0.5rem !important' }}>
